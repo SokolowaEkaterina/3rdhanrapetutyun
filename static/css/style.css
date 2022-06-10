@@ -1,0 +1,419 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a img {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+hr {
+  border: 0;
+}
+
+*:focus, *:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "armegoe", "Courier New", Courier, monospace;
+}
+
+.margin {
+  margin-top: 100px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 320px;
+}
+
+.page_width {
+  padding: 0px 50px;
+  margin: 0 auto;
+  left: 0;
+  top: 0;
+  max-width: 1520px;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .page_width {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .page_width {
+    padding: 0 20px;
+  }
+}
+.margin {
+  margin-top: 100px;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.button span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.button:hover {
+  background-color: transparent;
+}
+.button:hover span {
+  color: #fff;
+}
+.button:hover::before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: 1;
+  background-color: #0000C3;
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.button.white_blue {
+  background-color: transparent;
+}
+.button.white_blue span {
+  color: #fff;
+}
+.button.white_blue::before {
+  background-color: #fff;
+}
+.button.white_blue:hover span {
+  color: #0000C3;
+}
+
+.img_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.img_wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.mouse-parallax {
+  height: 500px;
+  position: relative;
+}
+
+.circle {
+  background-color: violet;
+  position: absolute;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(90.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
+}
+
+header {
+  background-image: linear-gradient(90.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 42px;
+  background-color: #6D4DF7;
+}
+
+.header_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.header_block .logo img {
+  width: 57px;
+  height: 69px;
+  padding-top: 59px;
+  padding-bottom: 17px;
+}
+.header_block nav .top_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  color: #fff;
+  float: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header_block nav .top_nav .soc_links_block {
+  margin: 0 36px 0 -4px;
+}
+.header_block nav .top_nav .soc_links_block .soc_link {
+  margin: 0 4px;
+  opacity: 1;
+}
+.header_block nav .top_nav .soc_links_block .soc_link svg {
+  fill: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header_block nav .top_nav .soc_links_block .soc_link svg:hover {
+  opacity: 0.5;
+}
+.header_block nav .top_nav .button {
+  font-size: 16px;
+  padding: 11px 35px;
+}
+.header_block nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  clear: right;
+  padding-top: 40px;
+  margin: 0 -30px;
+}
+.header_block nav .menu li {
+  position: relative;
+}
+.header_block nav .menu a {
+  text-transform: uppercase;
+  margin: 0 30px;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 20px;
+}
+.header_block nav .menu a:hover::before {
+  width: 100%;
+  left: 0%;
+  right: auto;
+}
+.header_block nav .menu a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  width: 0%;
+  height: 3px;
+  z-index: 1;
+  background-color: #fff;
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.header_block .submenu > ul {
+  opacity: 0;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 100%;
+  z-index: 1;
+  right: 0;
+  top: calc(100% + 10px);
+  padding: 40px 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header_block .submenu > ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-bottom: 5px solid #fff;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: none;
+}
+.header_block .submenu > ul li {
+  display: block;
+}
+.header_block .submenu > ul a {
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  position: relative;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #0000C3;
+}
+.header_block .submenu > ul a::before {
+  background-color: #0000C3;
+}
+
+.submenu:last-child > ul {
+  right: 0;
+}
+.submenu:last-child > ul::before {
+  right: 0;
+}
+
+.submenu:hover > ul {
+  opacity: 1;
+  pointer-events: initial;
+  background-color: #fff;
+}
+
+.main_screen {
+  margin-top: 145px;
+  width: 100%;
+  height: 564px;
+}
+.main_screen img {
+  position: sticky;
+}
+
+.statements {
+  position: relative;
+  padding-bottom: 70px;
+  padding-top: 100px;
+}
+
+.statements_block {
+  width: 80%;
+  margin: 0 auto;
+  /* Активная точка */
+  /* Элемент точки */
+}
+.statements_block .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #0000C3;
+  padding-bottom: 50px;
+}
+.statements_block .item .number {
+  font-size: 128px;
+  margin-right: 30px;
+  font-family: "NikkyouSans";
+}
+.statements_block .item .hiddne_block {
+  font-size: 80px;
+  width: 100%;
+}
+.statements_block .slick-dots {
+  position: relative;
+  left: 80%;
+  width: auto;
+}
+.statements_block .slick-dots li {
+  color: red;
+  display: inline-block;
+}
+.statements_block .slick-dots li.slick-active {
+  opacity: 0;
+}
+.statements_block .slick-dots li button {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #0000C3;
+  border: none;
+  opacity: 0.3;
+  font-family: "NikkyouSans";
+}
+.statements_block .slick-dots li button:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

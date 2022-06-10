@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'armegoe';
+	src: url('../static/fonts/armegoe/Armegoe.eot');
+	src: url('../static/fonts/armegoe/Armegoe.woff') format('woff'), 
+         url('../static/fonts/armegoe/Armegoe.ttf') format('truetype'),
+         url('../static/fonts/armegoe/Armegoe.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NikkyouSans';
+	src: url('../fonts/nikkyouSans/NikkyouSans.eot');
+	src: url('../fonts/nikkyouSans/NikkyouSans.woff') format('woff'), 
+		 url('../fonts/nikkyouSans/NikkyouSans.ttf') format('truetype'), 
+		 url('../fonts/nikkyouSans/NikkyouSans.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
