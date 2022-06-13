@@ -1,3 +1,4 @@
+// start base 
 $max-width: 1520px;
 $main-font: 'armegoe', 'Courier New', Courier, monospace;
 
@@ -57,13 +58,31 @@ body{
     margin-top: 100px;
 }
 
+h1, .h1, h2, .h2, h3, .h3{
+    text-transform: capitalize;
+    color: $text-accent-color;
+}
+
+h1, .h1{
+    font-size: 96px;
+}
+
+h2, .h2{
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
+p{
+    font-size: 14px;
+}
 
 .button{
     display: inline-block;
     padding: 20px;
-    overflow: hidden;
+    // overflow: hidden;
     box-sizing: border-box;
     background-color: #000;
+    color: #fff;
 
     position: relative;
 
@@ -130,6 +149,33 @@ body{
     }
 }
 
+.arrow_button{
+    display: block;
+    cursor: pointer;
+    width: auto;
+    box-sizing: border-box;
+    position: relative;
+
+    @include transition(all);
+
+    &:hover{
+        opacity: 0.5;
+    }
+
+    img{
+        display: block;
+        width: auto;
+    }
+    span{
+        position: absolute;
+        left: 0;
+        width: auto;
+        display: block;
+        opacity: 0.5;
+        color: $text-accent-color;
+    }
+}
+
 .img_wrapper{
     position: relative;
     overflow: hidden;
@@ -176,4 +222,18 @@ body{
     height: 200px;
     border-radius: 50%;
     background-image: $main_garadient;
+
+    &.circle_50{
+        width: 100px;
+        height: 100px;
+        background-image: linear-gradient(120.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
+
+    }
+        
+    &.circle_150{
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(-120.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
+    }
 }
+// end base 

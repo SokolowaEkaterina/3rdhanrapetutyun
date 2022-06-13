@@ -50,18 +50,28 @@ $(document).ready(function() {
       cssEase: 'linear'
     });
 
-    // services block
-        $(window).on('load resize', function() {
-          if ($(window).width() < 750) {
-            $('.services_block').slick({
-              centerMode: true,
-              arrows: false,
-              slidesToShow: 1,
-            });
-          } else {
-            $('.services_block').slick('unslick');
-          }
-      });
+    $('.discussions_block').slick({
+      slidesToShow: 3,
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      infinite: true,
+      slidesToScroll: 3,
+    });
+
+    // // services block
+    //     $(window).on('load resize', function() {
+    //       if ($(window).width() < 750) {
+    //         $('.services_block').slick({
+    //           centerMode: true,
+    //           arrows: false,
+    //           slidesToShow: 1,
+    //         });
+    //       } else {
+    //         $('.services_block').slick('unslick');
+    //       }
+    //   });
 
   // category
     //   $(window).on('load resize', function() {
@@ -88,53 +98,50 @@ $(document).ready(function() {
     
 });
 
-"use strict"
-
-window.onload = function () {
-  const parallax = document.querySelector('.parallax');
-
-  if(parallax) {
-    const circle = document.querySelector('.circle');
-
-    // const forCircle = 40;
-
-    const speed = 0.05;
-
-    let positionX = 0, positionY = 0;
-    let coordXprocent = 0, coordYprocent = 0;
-
-    function setMouseParallaxStyle() {
-      const distX = coordXprocent - positionX;
-      const distY = coordYprocent - positionY;
-
-      positionX = positionX + (distX * speed);
-      positionY = positionY + (distY * speed);
-
-      circle.style.cssText = 'transform: translate(${positionX / 40}%, ${positionY / 40}%);';
-      requestAnimationFrame(setMouseParallaxStyle);
-    }
-    setMouseParallaxStyle();
-
-    parallax.addEventListener("mousemove", function (e) {
-      const parallaxWidth = parallax.offsetWidth;
-      const parallaxHeight = parallax.offsetHeight;
-
-      const coordX = e.pageX - parallaxWidth / 2;
-      const coordY = e.pageY - parallaxHeight / 2;
-
-      coordXprocent = coordX / parallaxWidth * 100;
-      coordYprocent = coordY / parallaxHeight * 100;
-    });
-  }
-}
-
-
-
-let circle = document.querySelectorAll('.circle');
-for (let i = 0; i < circle.length; i++){
+// код для паралакс эфекта 
+let circle_1 = document.querySelectorAll('.circle_1');
+for (let i = 0; i < circle_1.length; i++){
     window.addEventListener('mousemove', function(e) { 
         let x = e.clientX / window.innerWidth;
         let y = e.clientY / window.innerHeight;     
-        circle[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 20 + 'px)';
+        circle_1[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 100 + 'px)';
     });    
+}
+
+let circle_2 = document.querySelectorAll('.circle_2');
+for (let i = 0; i < circle_2.length; i++){
+    window.addEventListener('mousemove', function(e) { 
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;     
+        circle_2[i].style.transform = 'translate(' + x * 100 + 'px, -' + y * 100 + 'px)';
+    });    
+}
+
+let circle_3 = document.querySelectorAll('.circle_3');
+for (let i = 0; i < circle_3.length; i++){
+    window.addEventListener('mousemove', function(e) { 
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;     
+        circle_3[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 100 + 'px)';
+    });    
+}
+
+let circle_4 = document.querySelectorAll('.circle_4');
+for (let i = 0; i < circle_4.length; i++){
+  window.addEventListener('mousemove', function(e) { 
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;     
+      // circle[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 20 + 'px)';
+      circle_4[i].style.transform = 'translate(' + x * 50 + 'px, -' + y * 20 + 'px)';
+  }); 
+}
+
+let circle_5 = document.querySelectorAll('.circle_5');
+for (let i = 0; i < circle_5.length; i++){
+  window.addEventListener('mousemove', function(e) { 
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;     
+      // circle[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 20 + 'px)';
+      circle_5[i].style.transform = 'translate(-' + x * 150 + 'px, -' + y * 200 + 'px)';
+  }); 
 }

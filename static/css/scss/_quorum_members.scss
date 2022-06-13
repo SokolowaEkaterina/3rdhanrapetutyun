@@ -1,0 +1,80 @@
+// start quorum_members 
+.quorum_members{
+
+    h2{
+        text-align: center;
+    }
+
+    .quorum_block{
+        display: flex;
+        justify-content: space-between;
+        .quorum_item{
+            position: relative;
+            border: 3px solid $text-color;
+            width: calc(20% - 54px);
+            background-color: $text-accent-color;
+            z-index: 2;
+
+            cursor: pointer;
+
+            @include transition(all);
+
+            .name{
+                color: #fff;
+                position: absolute;
+                bottom: 22px;
+                left: 34px;
+                font-size: 20px;
+                text-transform:capitalize;
+            }
+
+            img{
+                opacity: 0.8;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+
+                @include transition(all);
+            }
+
+            &::after{
+                content: '';
+                // display: block;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                width: 100%;
+                height: 100%;
+                // width: 500px;
+                // height: 100px;
+                background-color: transparent;
+                border: 3px solid $text-color;
+                z-index: -1;
+
+                @include transition(all);
+            }
+
+            &:hover{
+                border: 3px solid $text-accent-color;
+
+                img{
+                    opacity: 1;
+                }
+
+                &::after{
+                    background-color: $text-accent-color;
+                    border: 3px solid $text-accent-color;
+                }
+            }
+        }
+    }
+
+    .arrow_button{
+        text-align: right;
+        margin-top: 75px;
+        margin-left: 69.4%;
+        margin-right: 0;
+    }
+}
+// end quorum_members 

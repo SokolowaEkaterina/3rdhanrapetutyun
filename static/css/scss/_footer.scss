@@ -1,0 +1,37 @@
+footer{
+    background-color: $text-color;
+    color: #fff;
+    .tagline{
+        border: none;
+        padding: 15px 0;
+
+        .items_block{
+            .item{
+                font-size: 16px;
+                color: $text-color;
+                text-transform: uppercase;
+
+                &::before{
+                    background-color: $text-color;
+                }
+            }
+        }
+    }
+
+    .logo{
+        width: 117px;
+    }
+
+    a{
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .footer_block{
+        width: 332px;
+        display: flex;
+        padding: 100px 0;
+        margin: 0 auto;
+        align-items: center;
+    }
+}

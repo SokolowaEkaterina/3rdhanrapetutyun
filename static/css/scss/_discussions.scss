@@ -1,0 +1,190 @@
+// start discussions 
+
+.discussions{
+    h2{
+        text-align: center;
+    }
+
+    .discussions_block{
+        // display: flex;
+        // justify-content: space-between;
+        .item{
+            display: inline-block;
+            width: 33%;
+            overflow: hidden;
+            border: 3px solid $text-color;
+
+            box-sizing: border-box;
+            position: relative;
+
+            @include transition(all);
+
+            margin: 0 20px;
+
+            // padding: 54px 30px 0 30px;
+
+            .circle{
+                background-color:$text-color;
+                background-image: none;
+                position: absolute;
+                right: -19px;
+                top: -17px;
+                width: 107px;
+                height: 107px;
+
+                @include transition(all);
+
+                &.circle1{
+                    width: 56px;
+                    height: 56px;
+                    top: 21px;
+                    right: 60px;
+                }
+                &.circle2{
+                    width: 42px;
+                    height: 42px;
+                    top: 97px;
+                    right: 10px;
+                }
+
+                &.flag{
+                    opacity: 0;
+                    background-image: $main_garadient;
+
+                    @include transition(all);
+                }
+            }
+
+            .number{
+                display: inline-block;
+                background-color: $text-color;
+                padding: 12px 14px;
+                color: #fff;
+
+                @include transition(all);
+            }
+
+            .info{
+                margin-top: 54px;
+                margin-bottom: 40px;
+                .info_item{
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                }
+            }
+
+            .title, p, .info{
+                padding: 0 30px 0 30px;
+                @include transition(all);
+            }
+
+            .title{
+                display: block;
+                font-size: 20px;
+            }
+
+            .item_bottom{
+                border-top: 3px solid $text-color;
+                margin-top: 50px;
+
+                .button{
+                    // float: right;
+                    @include transition(all);
+                }
+            }
+        }
+
+        .item:hover{
+            border: 3px solid $text-accent-color;
+            color: $text-accent-color;
+
+            .circle{
+                
+                transform: translate(6px, 6px);
+                &.circle1{
+                    transform: translate(-10px, 10px);
+                }
+                &.circle2{
+
+                    transform: translate(-5px, 10px);
+                }
+
+                &.flag{
+                    opacity: 1;
+                }
+            }
+
+            .number{
+                background-color: $text-accent-color;
+            }
+
+            .item_bottom{
+                border-top: 3px solid $text-accent-color;
+
+                .button{
+                    background-color: $text-accent-color;
+    
+                    &:hover{
+                        span{
+                            color: $text-accent-color;
+                        }
+                        &::before{
+                            background-color: #fff;
+                         }
+                    }
+                }
+            }
+        }
+
+
+        .slick-dots{
+            position: relative;
+            width: auto;
+        }
+        .slick-dots li{
+            display: inline-block;
+            font-size: 0px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid $text-accent-color;
+            background-color: transparent;
+            margin: 56px 10px 0 10px;
+            align-items: center;
+            vertical-align: middle;
+
+            @include transition(all);
+
+            cursor: pointer;
+
+            &:hover{
+                width: 25px;
+                height: 25px;
+            }
+        }
+        /* Активная точка */
+        .slick-dots li.slick-active{
+            background-color: $text-accent-color;
+            width: 25px;
+            height: 25px;
+        }
+        /* Элемент точки */
+        .slick-dots li button{
+            font-size: 0px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background-color: transparent;
+        }
+
+    }
+
+    .arrow_button{
+        margin-top: -40px;
+        margin-left: 67.5%;
+    }
+}
+
+// end discussions 

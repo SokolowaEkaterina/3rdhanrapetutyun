@@ -1,0 +1,51 @@
+// start statistics 
+.statistics{
+    display: flex;
+
+    .item{
+        display: flex;
+
+        flex-grow: 1;
+
+
+        .item_title{
+            background-color: $text-color;
+            color: #fff;
+            font-size: 20px;
+            padding: 25px 13px;
+            width: 48%;
+            
+            span{
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+            }
+        }
+
+        .item_number{
+            width: 52%;
+            padding: 128px 10px 13px 30px;
+            vertical-align: bottom;
+            text-align: left;
+            color: #fff;
+
+            span{
+                font-size: 100px;
+            }
+        }
+
+        &:nth-child(1){
+            background-color: $red-accent-color;
+        }
+        &:nth-child(2){
+            background-color: $blue-accent-color;
+        }
+        &:nth-child(3){
+            background-color: $orange-accent-color;
+        }
+        &:nth-child(4){
+            background-color: $red-accent-color;
+        }
+    }
+}
+// end statistics 
