@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-  // добавляем класс в шапку при скролле
-	$(window).on('load scroll resize', function(){
-		//var height = $(window).height() - 100;
-		if($(this).scrollTop() > 10) {
-		    $('#header').addClass('scroll');
-		} else {
-		    $('#header').removeClass('scroll');
-		} 
-	});
+//   // добавляем класс в шапку при скролле
+// 	$(window).on('load scroll resize', function(){
+// 		//var height = $(window).height() - 100;
+// 		if($(this).scrollTop() > 10) {
+// 		    $('#header').addClass('scroll');
+// 		} else {
+// 		    $('#header').removeClass('scroll');
+// 		} 
+// 	});
   
   // добавляем класс в пункты с подменю
   $('ul.menu > li').each(function(){
@@ -32,10 +32,10 @@ $(document).ready(function() {
         $('.menu_btn').click(function(){
             if($('.menu_btn').hasClass('active')){
                 $('.menu_btn').removeClass('active');
-                $('.navigation').removeClass('slid_active');
+                $('nav').removeClass('slid_active');
             }else{
                 $('.menu_btn').addClass('active');
-                $('.navigation').addClass('slid_active');
+                $('nav').addClass('slid_active');
             }
         });
 
@@ -58,20 +58,34 @@ $(document).ready(function() {
       autoplaySpeed: 5000,
       infinite: true,
       slidesToScroll: 3,
+      responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                slidesToShow: 2,
+            }
+        },
+            {
+                breakpoint: 740,
+                settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
     });
 
-    // // services block
-    //     $(window).on('load resize', function() {
-    //       if ($(window).width() < 750) {
-    //         $('.services_block').slick({
-    //           centerMode: true,
-    //           arrows: false,
-    //           slidesToShow: 1,
-    //         });
-    //       } else {
-    //         $('.services_block').slick('unslick');
-    //       }
-    //   });
+    // services block
+        $(window).on('load resize', function() {
+          if ($(window).width() < 605) {
+            $('.quorum_block').slick({
+            //   centerMode: true,
+              arrows: false,
+              slidesToShow: 1,
+            });
+          } else {
+            $('.quorum_block').slick('unslick');
+          }
+      });
 
   // category
     //   $(window).on('load resize', function() {
@@ -96,6 +110,26 @@ $(document).ready(function() {
     // });
 
     
+    var show = true;
+    var countbox = ".benefits__inner";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+        var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+        var w_height = $(window).height(); // Высота окна браузера
+        var d_height = $(document).height(); // Высота всего документа
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            $('.benefits__number').css('opacity', '1');
+            $('.benefits__number').spincrement({
+                thousandSeparator: "",
+                duration: 1200
+            });
+             
+            show = false;
+        }
+    });
+
 });
 
 // код для паралакс эфекта 

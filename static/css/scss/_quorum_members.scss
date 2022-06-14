@@ -77,4 +77,112 @@
         margin-right: 0;
     }
 }
+
+
+@media screen and (max-width:1610px) {
+    .quorum_members .arrow_button{
+        margin-left: 65%;
+    }
+}
+@media screen and (max-width:1540px) {
+    .quorum_members .arrow_button{
+        margin-left: 60%;
+    }
+}
+@media screen and (max-width:1370px) {
+    .quorum_members .arrow_button{
+        margin-left: 57%;
+    }
+}
+@media screen and (max-width:1290px) {
+    .quorum_members .arrow_button{
+        margin-left: 55%;
+    }
+}
+@media screen and (max-width:1170px) {
+    .quorum_members .arrow_button{
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width:1100px) {
+    .quorum_members .arrow_button{
+        margin-left: 45%;
+    }
+}
+@media screen and (max-width:980px) {
+    .quorum_members .arrow_button{
+        margin-left: 40%;
+    }
+}
+@media screen and (max-width:910px) {
+    .quorum_members .arrow_button{
+        margin-left: 36%;
+    }
+}
+@media screen and (max-width:870px) {
+    .quorum_members .arrow_button{
+        margin-left: 0%;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .quorum_members{
+        .quorum_block{
+            flex-wrap: wrap;
+            .quorum_item{
+                width: calc( 25% - 54px);
+                margin-bottom: 54px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1061px) {
+    .quorum_members{
+        .quorum_block{
+            justify-content: start;
+            margin: 0 - 27px;
+
+            .quorum_item{
+                width: calc( 30% - 54px);
+
+                margin: 0 27px;
+                margin-bottom: 54px;
+            }
+        }
+    }
+}
+@media screen and (max-width:800px) {
+    .quorum_members{
+        .quorum_block{
+            justify-content: start;
+            margin: 0 - 27px;
+
+            .quorum_item{
+                width: calc( 49% - 54px);
+
+                margin: 0 27px;
+                margin-bottom: 54px;
+            }
+        }
+    }
+}
+@media screen and (max-width:605px) {
+    .quorum_members{
+        .quorum_block{
+            justify-content: start;
+            margin: 0 -20px;
+
+            .quorum_item{
+                width: 100%;
+
+                margin: 0 54px;
+                margin-bottom: 54px;
+            }
+        }
+    }
+}
 // end quorum_members 

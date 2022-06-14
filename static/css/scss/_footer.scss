@@ -1,18 +1,52 @@
+// start footer 
 footer{
     background-color: $text-color;
     color: #fff;
-    .tagline{
+    .footer_tagline{
         border: none;
         padding: 15px 0;
+        background-color: #fff;
 
         .items_block{
+            position: relative;
+            animation: tagline 30s infinite linear;
             .item{
                 font-size: 16px;
                 color: $text-color;
                 text-transform: uppercase;
+                position: absolute;
+                // top: 50%;
+                margin-top: -9px;
+                padding-left: 30px;
+                width: 100%;
 
                 &::before{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    left: 0;
+                    height: 10px;
+                    border-radius: 50%;
                     background-color: $text-color;
+                    vertical-align: middle;
+                    margin-top: 5px;
+                }
+
+                &:nth-child(1){
+                    left: 0;
+                }
+
+                &:nth-child(2){
+                    left: 435px;
+                }
+                &:nth-child(3){
+                    left: 870px;
+                }
+                &:nth-child(4){
+                    left: 1305px;
+                }
+                &:nth-child(5){
+                    left: 1740px;
                 }
             }
         }
@@ -35,3 +69,16 @@ footer{
         align-items: center;
     }
 }
+@media screen and (max-width:400px) {
+    footer .footer_block{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+
+        .logo{
+            margin-bottom: 40px;
+        }
+    }
+}
+// end footer 

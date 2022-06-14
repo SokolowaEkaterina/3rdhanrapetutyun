@@ -4,6 +4,27 @@
     position: relative;
     padding-bottom: 70px;
     padding-top: 100px;
+
+    .circle_1{
+        top: 200px;
+        left: -50px;
+    }
+    .circle_2{
+        bottom: -150px; 
+        left: 200px;
+    }
+    .circle_3{
+        top: -8%; 
+        left: 200px;
+    }
+    .circle_4{
+        top: -12%; 
+        right: 250px;
+    }
+    .circle_5{
+        bottom: 0px; 
+        right: -50px
+    }
 }
 
 .statements_block{
@@ -74,4 +95,112 @@
     }
 }
 
+@media screen and (max-width:1380px){
+    .statements_block .item .hiddne_block{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width:1100px){
+    .statements{
+        .circle_2{
+            bottom: -200px;
+        }
+        .circle_5{
+            right: -100px;
+            bottom: -30px;
+        }
+    }
+    
+// .circle_4
+// .circle_5
+}
+@media screen and (max-width:934px){
+    .statements_block .item .hiddne_block{
+        font-size: 58px;
+        width: 90%;
+    }
+
+    .statements_block .item .number {
+        font-size: 100px;
+    }
+    .statements_block .slick-dots{
+        left: 70%;
+    }
+}
+@media screen and (max-width:800px){
+    .statements_block{
+        width: 95%;
+    }
+    .statements{
+        .circle_1{
+            left: -150px;
+        }
+        .circle_4{
+            right: -20px;
+            top: -20px;
+        }
+        .circle_2{
+            left: 0;
+        }
+    }  
+}
+@media screen and (max-width:700px) {
+    .statements_block .slick-dots{
+        left: 60%;
+    }
+}
+@media screen and (max-width:600px) {
+    .statements_block{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .statements_block .slick-dots{
+        left: 0%;
+    }
+
+    .statements{
+        padding-bottom: 200px;
+        padding-top: 50px;
+        .circle_5{
+            right: -150px;
+            bottom: -50px;
+        }
+    }
+    .statements_block .item{
+        // display: block;
+        flex-direction: column;
+    }
+
+    .statements_block .item .hiddne_block{
+        font-size: 40px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .statements_block .item .hiddne_block{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:450px){
+    .statements_block .item .hiddne_block{
+        font-size: 33px;
+    }
+}
+@media screen and (max-width:410px){
+    .statements_block .item .hiddne_block{
+        font-size: 30px;
+    }
+    .statements{
+        padding-bottom: 200px;
+        padding-top: 50px;
+        .circle_3{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:375px){
+    .statements_block .item .hiddne_block{
+        font-size: 26px;
+    }
+}
 // end statements 

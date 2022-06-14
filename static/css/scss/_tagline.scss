@@ -1,46 +1,100 @@
-.tagline{
-    display: flex;
-    flex-wrap: nowrap;
+// start tagline 
+.tegline_wrapper{
     border-top: 3px solid $text-accent-color;
     border-bottom: 3px solid $text-accent-color;
-    padding: 65px 0;
+
     background-color: #fff;
+    padding: 65px 0;
+    // z-index: 3;
+    position: relative;
+}
+.tagline{
     position: relative;
 
-
-    align-items: center;
-
-    box-sizing: border-box;
-
-    .items_block{
-        animation: tagline 18s infinite linear;
-        @include transition(all);
-        margin: 0 auto;
-    }
+    animation: tagline 18s infinite linear;
     .item{
         color: $text-accent-color;
         font-size: 32px;
         text-transform: capitalize;
         display: inline;
         margin: 0 44px;
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+        padding-left: 20px;
+        // animation: tagline 18s infinite linear;
 
         &::before{
             content: '';
-            display: inline-block;
+            // display: inline-block;
+            // float: left;
+            position: absolute;
             width: 10px;
+            left: 0;
             height: 10px;
             border-radius: 50%;
             background-color: $text-accent-color;
             vertical-align: middle;
-            margin-right: 10px;
+            margin-top: 12px;
 
         }
-
-
+        &:nth-child(1){
+            left: 0;
+        }
+        &:nth-child(2){
+            left: 445px;
+        }
+        &:nth-child(3){
+            left: 791px;
+        }
+        &:nth-child(4){
+            left: 1153px;
+        }
+        &:nth-child(5){
+            left: 1612px;
+        }
     }
 }
 
 @keyframes tagline {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%);}
-  }
+}
+
+@media screen and (max-width:1650px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-120%);}
+    }
+}
+@media screen and (max-width:1579px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-140%);}
+    }
+}
+@media screen and (max-width:1270px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-160%);}
+    }
+}
+@media screen and (max-width:1160px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-200%);}
+    }
+}
+@media screen and (max-width:950px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-240%);}
+    }
+}
+@media screen and (max-width:960px){
+    @keyframes tagline {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-280%);}
+    }
+}
+//   end tagline 
