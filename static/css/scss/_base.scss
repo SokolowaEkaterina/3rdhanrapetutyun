@@ -10,6 +10,7 @@ $blue-accent-color: #8080E1;
 $orange-accent-color: #FBC98F;
 
 $border: 3px solid #000;
+$border_accent: 3px solid $text-accent-color;
 
 @mixin transition ($property){
     -webkit-transition: $property 0.3s ease 0s;
@@ -75,7 +76,9 @@ h2, .h2{
 p{
     font-size: 14px;
 }
-
+.button_center{
+    text-align: center;
+}
 .button{
     display: inline-block;
     padding: 20px;
@@ -94,6 +97,7 @@ p{
         font-family: $main-font;
     }
     span, input{
+        text-transform: uppercase;
         width: 100%;
         height: 100%;
         display: block;
@@ -300,14 +304,17 @@ p{
             display: inline-block;
         }
         a{
+            display: block;
+            padding: 5px;
             font-size: 20px;
-            margin: 14.5px;
+            margin: 10px;
             color: #000;
 
             @include transition(all);
 
             &:hover{
                 color: $text-accent-color;
+                font-size: 30px;
             }
         }
 
@@ -315,7 +322,32 @@ p{
             font-size: 50px;
             // margin-top: -3px;
             // display: block;
+
+            &:hover{
+                font-size: 50px;
+            }
         }
+    }
+}
+
+.like{
+    width: 60px;
+    display: block;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-top: 80px;
+    svg{
+        object-fit: contain;
+        object-position: top right;
+        fill: $text-accent-color;
+        vertical-align: middle;
+    }
+    span{
+        color: $text-accent-color;
+    }
+
+    &.liked{
+        opacity: 1;
     }
 }
 // end base 

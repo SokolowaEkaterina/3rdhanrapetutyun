@@ -38,13 +38,18 @@ $(document).ready(function() {
                 $('nav').addClass('slid_active');
             }
         });
-
+    
+    // filter button 
     $('.filter_button').click(function(){
         if($('.filter').hasClass('active')){
             $('.filter').removeClass('active');
         }else{
             $('.filter').addClass('active');
         }
+    });
+
+    $('.like').click(function(){
+        $(this).toggleClass('liked');
     });
 
     $('.statements_block').slick({
@@ -64,8 +69,8 @@ $(document).ready(function() {
       dots: true,
       autoplay: true,
       autoplaySpeed: 5000,
-      infinite: true,
-      slidesToScroll: 3,
+    //   infinite: true,
+      slidesToScroll: 1,
       responsive: [
             {
                 breakpoint: 1000,
@@ -89,6 +94,8 @@ $(document).ready(function() {
             //   centerMode: true,
               arrows: false,
               slidesToShow: 1,
+              autoplay: true,
+              autoplaySpeed: 1000,
             });
           } else {
             $('.quorum_block').slick('unslick');

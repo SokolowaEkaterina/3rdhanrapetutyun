@@ -2,11 +2,40 @@
 .discussion_info{
     display: flex;
 
+    .quorum_item{
+        margin-top: 33px;
+        width: 160px;
+
+        .name{
+            text-align: left;
+        }
+
+        .img_wrapper{
+            &::after{
+                background-color: #000;
+            }
+
+            img{
+                opacity: 1;
+            }
+        }
+
+        &:hover{
+            .img_wrapper{
+                &::after{
+                    background-color: $text-accent-color;
+                }
+            }
+        }
+    }
+
     .info_block{
         display: flex;
         justify-content: flex-start;
 
         align-items: flex-start;
+
+        margin-left: 50px;
 
         .item{
             color: #fff;
@@ -82,7 +111,7 @@
             display: inline-block;
             background-image: url(../img/icon_file.svg);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             vertical-align: middle;
 
             @include transition(all);
@@ -98,21 +127,100 @@
 }
 
 .comments{
+    width: 65%;
     .h2{
         color: #000;
     }
 
+    .form_block{
+        // width: 65%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        margin-bottom: 80px;
+        display: block;
+    }
+
     textarea{
-        width: 40%;
+        box-sizing: border-box;
+        width: 100%;
         height: 250px;
         border: $border;
         padding: 40px 20px;
+
+        font-family: $main-font;
+
+        resize: none;
+
+        @include transition(all);
+
+        &:hover,
+        &:focus{
+            border: $border_accent;
+        }
     }
 
     .button{
+        float: right;
+        cursor: pointer;
+
+        margin-top: -5px;
         input{
             border: none;
         }
+    }
+}
+
+.comment{
+    border: $border;
+
+    margin: 40px 0;
+
+    width: 86%;
+    .info{
+        border-bottom: $border;
+
+        align-items: center;
+
+        position: relative;
+        display: flex;
+
+        .info_text{
+            display: flex;
+            justify-content: space-between;
+            width:90%;
+            padding: 0 20px;
+        }
+        
+
+        .img_wrapper{
+            display: inline-block;
+            border-right: $border;
+            width: 74px;
+            height: 90px;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .name{
+            display: inline-block;
+            align-items: center;
+            vertical-align: middle;
+            // margin-left: 10px;
+
+            font-size: 14px;
+        }
+
+        .date{
+            font-size: 10px;
+            // float: right;
+
+            // margin-top: 50%;
+        }
+    }
+
+    .comment_text{
+        padding: 25px 20px 50px 20px;
     }
 }
 

@@ -12,7 +12,7 @@
             display: inline-block;
             width: 33%;
             overflow: hidden;
-            border: 3px solid $text-color;
+            border: $border;
 
             box-sizing: border-box;
             position: relative;
@@ -85,7 +85,7 @@
             }
 
             .item_bottom{
-                border-top: 3px solid $text-color;
+                border-top: $border;
                 margin-top: 50px;
 
                 .button{
@@ -96,7 +96,7 @@
         }
 
         .item:hover{
-            border: 3px solid $text-accent-color;
+            border: $border_accent;
             color: $text-accent-color;
 
             .circle{
@@ -120,7 +120,7 @@
             }
 
             .item_bottom{
-                border-top: 3px solid $text-accent-color;
+                border-top: $border_accent;
 
                 .button{
                     background-color: $text-accent-color;
@@ -144,6 +144,15 @@
         }
         .slick-dots li{
             display: inline-block;
+            overflow: hidden;
+            align-items: center;
+            
+        }
+        /* Активная точка */
+
+        /* Элемент точки */
+        .slick-dots li button{
+            display: inline-block;
             font-size: 0px;
             width: 16px;
             height: 16px;
@@ -154,29 +163,38 @@
             align-items: center;
             vertical-align: middle;
 
+            position: relative;
+
             @include transition(all);
 
             cursor: pointer;
+
+            // &::before{
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     border-radius: 50%;
+            //     background-color: red;
+            //     opacity: 0;
+            // }
 
             &:hover{
                 width: 25px;
                 height: 25px;
             }
         }
-        /* Активная точка */
+
         .slick-dots li.slick-active{
-            background-color: $text-accent-color;
+
+            button{
+                
+                background-color: $text-accent-color;
             width: 25px;
             height: 25px;
-        }
-        /* Элемент точки */
-        .slick-dots li button{
-            font-size: 0px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 1px solid transparent;
-            background-color: transparent;
+            }
         }
 
     }
@@ -184,6 +202,32 @@
     .arrow_button{
         margin-top: -40px;
         margin-left: 67.5%;
+    }
+
+    &.discussion_wrapper{
+        .discussions_block{
+            width: 100%;
+            @include transition(all);
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+    
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            columns: 150px auto;
+            gap: 20px;
+            margin: 0 -20px;
+            .item{
+                // width: calc(33% - 20px);
+                // min-width: 270px;
+                // margin: 20px 10px;
+    
+                // flex: 1 1 400px;
+                width: 100%;
+                @include transition(all);
+            }
+        }
     }
 }
 
@@ -264,8 +308,8 @@
             &:hover{
                 color: $text-accent-color;
                 &::before{
-                    border-bottom: 3px solid $text-accent-color;
-                    border-right: 3px solid $text-accent-color;
+                    border-bottom: $border_accent;
+                    border-right: $border_accent;
 
                 }
             }
@@ -313,8 +357,9 @@
 
                 @include transition(all);
 
-                &:hover{
-                    border: 3px solid $text-accent-color;
+                &:hover,
+                &:focus{
+                    border: $border_accent;
                 }
             }
 
@@ -345,29 +390,12 @@
         }
     }
 
-    .discussions{
+    .discussion_wrapper{
         padding-bottom: 100px;
-    }
-}
-
-.discussions{
-    .discussions_block{
-        width: 100%;
-        @include transition(all);
-        padding-top: 150px;
-        display: flex;
-        flex-wrap: wrap;
-        // justify-content: space-between;
-        margin: 0 -10px;
-        .item{
-            width: calc(33% - 20px);
-            min-width: 270px;
-            margin: 20px 10px;
-
-            @include transition(all);
+        .discussions_block{
+            padding-top: 150px;
+            margin-bottom: 170px;
         }
-
-        margin-bottom: 170px;
     }
 }
 // end discussions 

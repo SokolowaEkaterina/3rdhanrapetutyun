@@ -1,7 +1,7 @@
 // start tagline 
 .tegline_wrapper{
-    border-top: 3px solid $text-accent-color;
-    border-bottom: 3px solid $text-accent-color;
+    border-top: $border_accent;
+    border-bottom: $border_accent;
 
     background-color: #fff;
     padding: 65px 0;
