@@ -9,7 +9,7 @@ $red-accent-color: #FF8080;
 $blue-accent-color: #8080E1;
 $orange-accent-color: #FBC98F;
 
-$border-weight: 3px;
+$border: 3px solid #000;
 
 @mixin transition ($property){
     -webkit-transition: $property 0.3s ease 0s;
@@ -88,7 +88,12 @@ p{
 
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
-    span{
+    input{
+        background-color: transparent;
+        text-transform: uppercase;
+        font-family: $main-font;
+    }
+    span, input{
         width: 100%;
         height: 100%;
         display: block;
@@ -234,6 +239,83 @@ p{
         width: 300px;
         height: 300px;
         background-image: linear-gradient(-120.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
+    }
+
+    &.circle_30{
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(-100deg, #F94D57 0%, #694DFB 46.88%, #FCAB4F 100%);
+    }
+}
+
+.breadcrumbs_wrapper{
+    margin-top: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-bottom: $border;
+}
+
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    a, span{
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #000;
+        // color: #fff;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    a:after{
+        content: '\2192';
+        display: inline-block;
+        width: 25px;
+        height: 10px;
+        font-size: 40px;
+        color: #000;
+        opacity: 60%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .active{
+        opacity: 60%;
+    }
+}
+
+.pagination{
+    width: 100%;
+    text-align: center;
+    ul{
+        width: auto;
+        // display: flex;
+        align-items: center;
+        vertical-align: middle;
+        margin: 0 auto;
+
+        li{
+            display: inline-block;
+        }
+        a{
+            font-size: 20px;
+            margin: 14.5px;
+            color: #000;
+
+            @include transition(all);
+
+            &:hover{
+                color: $text-accent-color;
+            }
+        }
+
+        .arrov{
+            font-size: 50px;
+            // margin-top: -3px;
+            // display: block;
+        }
     }
 }
 // end base 

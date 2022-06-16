@@ -1,0 +1,119 @@
+// start discussion 
+.discussion_info{
+    display: flex;
+
+    .info_block{
+        display: flex;
+        justify-content: flex-start;
+
+        align-items: flex-start;
+
+        .item{
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            align-items: center;
+            border: $border;
+            margin-top: -3px;
+
+            font-size: 16px;
+            
+            padding: 40px 30px 30px 30px;
+
+            box-sizing: border-box;
+            height: auto;
+
+            &:nth-child(1){
+                background-color: $red-accent-color;
+            }
+            &:nth-child(2){
+                background-color: $blue-accent-color;
+                border-right: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+            &:nth-child(3){
+                background-color: $orange-accent-color;
+            }
+        }
+    }
+}
+
+.discussion_page{
+    padding-bottom: 50px;
+    border-bottom: $border ;
+}
+
+.discussion_text{
+    display: block;
+    width: 70%;
+    margin-top: 50px;
+    .title{
+        font-size: 64px;
+        color: $text-accent-color;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+
+    .file{
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+        // width: 30%;
+        width: auto;
+
+        @include transition(all);
+        
+        span{
+            display: inline-block;
+            // width: 25%;
+            width: 250px;
+            vertical-align: middle;
+            margin-left: 50px;
+            color: $text-accent-color;
+
+            @include transition(all);
+        }
+        &::before{
+            content: '';
+            width: 102px;
+            height: 138px;
+            display: inline-block;
+            background-image: url(../img/icon_file.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+
+            @include transition(all);
+        }
+
+        &:hover{
+            span,
+            &::before{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.comments{
+    .h2{
+        color: #000;
+    }
+
+    textarea{
+        width: 40%;
+        height: 250px;
+        border: $border;
+        padding: 40px 20px;
+    }
+
+    .button{
+        input{
+            border: none;
+        }
+    }
+}
+
+// end discussion 

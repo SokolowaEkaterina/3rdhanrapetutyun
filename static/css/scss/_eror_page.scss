@@ -1,0 +1,64 @@
+// start eror 
+.eror_page{
+    position: relative;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding-bottom: 300px;
+
+    .circle_1{
+        right: 200px;
+        top: 200px;
+    }
+    .circle_2{
+        left: auto;
+        top: auto;
+        right: -150px;
+        bottom: 100px;
+    }
+    .circle_3{
+        left: 50%;
+        margin: -50px;
+        top: 150px;
+        z-index: 1;
+    }
+    .circle_4{
+        left: 30%;
+        margin-left: -50px;
+        top: 180px;
+        z-index: 1;
+    }
+    .circle_6{
+        top: 100px;
+        left: 100px;
+    }
+    .circle_7{
+        top: 400px;
+        left: 400px;
+    }
+    img{
+        display: block;
+        margin: 200px auto 0 auto;
+    }
+    span{
+        display: block;
+        font-size: 20px;
+        margin-top: -50px;
+    }
+
+    .soc_links_block{
+        margin-top: 30px;
+        svg{
+            fill: #000;
+
+            margin: 0 6px;
+
+            @include transition(all);
+
+            &:hover{
+                fill: $text-accent-color;
+            }
+        }
+    }
+}
+// end eror 

@@ -39,6 +39,14 @@ $(document).ready(function() {
             }
         });
 
+    $('.filter_button').click(function(){
+        if($('.filter').hasClass('active')){
+            $('.filter').removeClass('active');
+        }else{
+            $('.filter').addClass('active');
+        }
+    });
+
     $('.statements_block').slick({
       slidesToShow: 1,
       arrows: false,
@@ -50,7 +58,7 @@ $(document).ready(function() {
       cssEase: 'linear'
     });
 
-    $('.discussions_block').slick({
+    $('.discussion_slider').slick({
       slidesToShow: 3,
       arrows: false,
       dots: true,
@@ -77,7 +85,7 @@ $(document).ready(function() {
     // services block
         $(window).on('load resize', function() {
           if ($(window).width() < 605) {
-            $('.quorum_block').slick({
+            $('.quorum_slider').slick({
             //   centerMode: true,
               arrows: false,
               slidesToShow: 1,
@@ -178,4 +186,23 @@ for (let i = 0; i < circle_5.length; i++){
       // circle[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 20 + 'px)';
       circle_5[i].style.transform = 'translate(-' + x * 150 + 'px, -' + y * 200 + 'px)';
   }); 
+}
+
+let circle_6 = document.querySelectorAll('.circle_6');
+for (let i = 0; i < circle_6.length; i++){
+  window.addEventListener('mousemove', function(e) { 
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;     
+      // circle[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 20 + 'px)';
+      circle_6[i].style.transform = 'translate(' + x * 200 + 'px, -' + y * 100 + 'px)';
+  }); 
+}
+
+let circle_7 = document.querySelectorAll('.circle_7');
+for (let i = 0; i < circle_7.length; i++){
+    window.addEventListener('mousemove', function(e) { 
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;     
+        circle_7[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 100 + 'px)';
+    });    
 }

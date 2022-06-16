@@ -132,7 +132,8 @@ header{
         li{
             position: relative;
         }
-        a{
+        a,
+        span{
             text-transform: uppercase;
             margin: 0 30px;
             font-size: 14px;
@@ -178,6 +179,11 @@ header{
                 }
             }
         }
+
+        span:before{
+            display:  none;
+            
+        }
     }
 
     .slid_active{
@@ -200,19 +206,6 @@ header{
     padding: 40px 0 10px 0;
     pointer-events: none;
     @include transition(all);
-
-    &::before {
-        content: '';
-        position: absolute;
-        // top: -5px;
-        top: 0;
-        // right: 10%;
-        border-bottom: 5px solid #fff;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        @include transition(all);
-        display: none;
-    }
 
     li {
         display: block;
@@ -291,7 +284,11 @@ header{
             @include transition(all);
             background-color: #fff;
 
+            border: 3px solid $text-accent-color;
+
             transform: translateX(100%);
+            // transform: translateY(-100%);
+            
         }
         nav .top_nav{
             text-align: left;
@@ -314,24 +311,40 @@ header{
             // padding-top: 40px;
             padding: 40px 30px 0 30px;
             margin: 0 -30px;
-            a{
+            a,
+            span{
                 display: inline-block;
                 margin: 0px 30px 20px 30px;
                 color: #000;
+
+                &::before{
+                    background-color: $text-accent-color;
+                }
             }
         }
     }
 
     .header_block .submenu > ul{
         opacity: 1;
-        position: static;
+        position: relative;
         top: 100%;
         padding: 0px 0 10px 20px;
     
-        &::before {
-            border-bottom: 5px solid $text-color;
+        &::before{
+            content: '';
+            position: absolute;
+            // position: relative;
+            display: block;
+            // left: 30px;
+            left: 0;
+            top: 0;
+            // // left: 20px;
+            // height: 10%;
+            width: 30px;
+            height: 100%;
+            background-color: $text-accent-color;
         }
-    
+
         a {
             margin-bottom: 10px;
             color: $text-color;

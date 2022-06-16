@@ -14,4 +14,51 @@
         margin-top: 109px;
     }
 }
+
+
+
+
+
+.other_main_screen{
+    height: auto;
+    background-image: $main_garadient;
+    padding-bottom: 200px;
+    position: relative;
+    // overflow: visible;
+
+    .circle_1{
+        right: 400px;
+        top: -50px;
+    }
+    .circle_2{
+        top: 200px;
+        right: -150px;
+    }
+    .circle_3{
+        right: 200px;
+        top: 100px;
+
+    }
+    .circle_4{
+        right: 300px;
+        bottom: -50px;
+    }
+    .circle_5{
+        
+    }
+    .h1{
+        color: #fff;
+        margin-top: 80px;
+        width: 70%;
+    }
+
+    .breadcrumbs{
+        a, span{
+            color: #fff;
+        }
+        a:after{
+            color: #fff;
+        }
+    }
+}
 // end main screen 
