@@ -117,6 +117,7 @@ h2, .h2 {
 
 p {
   font-size: 14px;
+  line-height: 20px;
 }
 
 .button_center {
@@ -1488,6 +1489,7 @@ header::before {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin: 0 20px;
+  padding-bottom: 50px;
 }
 .discussions .discussions_block .item .circle {
   background-color: #000;
@@ -1540,13 +1542,19 @@ header::before {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.discussions .discussions_block .item p {
+  margin-bottom: 50px;
+}
 .discussions .discussions_block .item .title {
   display: block;
   font-size: 20px;
 }
 .discussions .discussions_block .item .item_bottom {
   border-top: 3px solid #000;
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .discussions .discussions_block .item .item_bottom .button {
   -webkit-transition: all 0.3s ease 0s;
@@ -2419,6 +2427,7 @@ footer .footer_block {
   vertical-align: middle;
 }
 .comment .info .name {
+  color: #000;
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
