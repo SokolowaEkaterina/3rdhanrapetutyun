@@ -2775,7 +2775,14 @@ footer .footer_block {
   width: 100%;
 }
 .personal_information .information .information_top_block .quorum_item {
+  cursor: auto;
   width: 250px;
+}
+.personal_information .information .information_top_block .quorum_item:hover .img_wrapper {
+  border: 3px solid #000;
+}
+.personal_information .information .information_top_block .quorum_item:hover .img_wrapper:after {
+  border: 3px solid #000;
 }
 .personal_information .information .information_top_block .quorum_item .img_wrapper img {
   opacity: 1;

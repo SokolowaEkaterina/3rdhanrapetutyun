@@ -46,9 +46,21 @@
             width: 100%;
 
             .quorum_item{
+                cursor:auto;
                 width: 250px;
 
+                &:hover{
+                    .img_wrapper{
+                        border: $border;
+
+                        &:after{
+                            border: $border;
+                        }
+                    }
+                }
+
                 .img_wrapper{
+
                     img{
                         opacity: 1;
                     }
