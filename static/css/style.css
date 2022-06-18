@@ -63,7 +63,7 @@ hr {
 }
 
 body {
-  font-family: "armegoe", "Courier New", Courier, monospace;
+  font-family: "Armegoe", "Courier New", Courier, monospace;
 }
 
 .margin {
@@ -155,6 +155,10 @@ p {
   line-height: 20px;
 }
 
+.big {
+  text-transform: uppercase;
+}
+
 .button_center {
   text-align: center;
 }
@@ -173,7 +177,7 @@ p {
 .button input {
   background-color: transparent;
   text-transform: uppercase;
-  font-family: "armegoe", "Courier New", Courier, monospace;
+  font-family: "Armegoe", "Courier New", Courier, monospace;
 }
 .button span, .button input {
   text-transform: uppercase;
@@ -751,8 +755,23 @@ header::before {
   width: 100%;
   height: 564px;
 }
-.main_screen img {
-  position: sticky;
+
+.main_screen_slider {
+  z-index: 0;
+  overflow: hidden;
+}
+.main_screen_slider .item {
+  position: relative;
+  width: 100%;
+  height: 564px;
+}
+.main_screen_slider img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media screen and (max-width: 840px) {
@@ -2172,11 +2191,25 @@ header::before {
 footer {
   background-color: #000;
   color: #fff;
+  position: relative;
+}
+footer .footer_bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
 }
 footer .footer_tagline {
   border: none;
   padding: 15px 0;
   background-color: #fff;
+  position: relative;
+  z-index: 2;
 }
 footer .footer_tagline .items_block {
   position: relative;
@@ -2603,7 +2636,7 @@ footer .footer_block {
   height: 250px;
   border: 3px solid #000;
   padding: 40px 20px;
-  font-family: "armegoe", "Courier New", Courier, monospace;
+  font-family: "Armegoe", "Courier New", Courier, monospace;
   resize: none;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;

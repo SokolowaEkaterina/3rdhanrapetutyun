@@ -1,6 +1,6 @@
 // start base 
 $max-width: 1520px;
-$main-font: 'armegoe', 'Courier New', Courier, monospace;
+$main-font: 'Armegoe', 'Courier New', Courier, monospace;
 
 $main_garadient: linear-gradient(90.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
 $text-color: #000;
@@ -112,6 +112,10 @@ h2, .h2{
 p{
     font-size: 14px;
     line-height: 20px;
+}
+
+.big{
+    text-transform: uppercase;
 }
 .button_center{
     text-align: center;

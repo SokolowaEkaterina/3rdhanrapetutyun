@@ -3,9 +3,27 @@
     margin-top: 145px;
     width: 100%;
     height: 564px;
+}
+
+.main_screen_slider{
+    z-index: 0;
+    overflow: hidden;
+
+    .item{
+        position: relative;
+        width: 100%;
+        height: 564px;
+
+    }
 
     img{
-        position: sticky;
+        object-fit: cover;
+        // position: absolute;
+        width: 100%;
+        height: 100%;
+
+        // bottom: 0;
+        object-position: center;
     }
 }
 

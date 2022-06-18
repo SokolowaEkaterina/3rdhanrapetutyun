@@ -52,12 +52,23 @@ $(document).ready(function() {
         $(this).toggleClass('liked');
     });
 
+    $('.main_screen_slider').slick({
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        infinite: true,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     $('.statements_block').slick({
       slidesToShow: 1,
       arrows: false,
       dots: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 6000,
       infinite: true,
       fade: true,
       cssEase: 'linear'
