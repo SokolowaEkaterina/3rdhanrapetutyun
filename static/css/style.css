@@ -1610,6 +1610,7 @@ header::before {
   display: block;
   margin-bottom: 10px;
   font-size: 12px;
+  text-transform: capitalize;
 }
 .discussions .discussions_block .item .title, .discussions .discussions_block .item p, .discussions .discussions_block .item .info {
   padding: 0 30px 0 30px;
@@ -1672,6 +1673,30 @@ header::before {
 .discussions .discussions_block .item:hover .circle.circle2 {
   -webkit-transform: translate(-5px, 10px);
           transform: translate(-5px, 10px);
+}
+.discussions .discussions_block .item:hover .item_bottom {
+  border-top: 3px solid #0000C3;
+}
+.discussions .discussions_block .item:hover .item_bottom .button:hover span {
+  color: #0000C3;
+}
+.discussions .discussions_block .item:hover .item_bottom .button:hover::before {
+  background-color: #fff;
+}
+.discussions .discussions_block .item:hover.no_active .number {
+  background-color: #000;
+}
+.discussions .discussions_block .item:hover.no_active .item_bottom {
+  border-top: 3px solid #000;
+}
+.discussions .discussions_block .item:hover.no_active .item_bottom .button {
+  background-color: #000;
+}
+.discussions .discussions_block .item:hover.no_active .item_bottom .button:hover span {
+  color: #000;
+}
+.discussions .discussions_block .item:hover.no_active .item_bottom .button:hover::before {
+  background-color: #fff;
 }
 .discussions .discussions_block .slick-dots {
   position: relative;
@@ -1888,6 +1913,16 @@ header::before {
 .discussions_page .discussion_wrapper .discussions_block {
   padding-top: 150px;
   margin-bottom: 170px;
+}
+
+.notification {
+  display: block;
+  width: 50%;
+  margin: 100px auto 0 auto;
+  padding: 40px 20px;
+  border: 3px solid #0000C3;
+  text-align: center;
+  color: #0000C3;
 }
 
 .quorum_members h2 {

@@ -77,6 +77,7 @@
                     display: block;
                     margin-bottom: 10px;
                     font-size: 12px;
+                    text-transform: capitalize;
                 }
             }
 
@@ -173,22 +174,46 @@
             //     background-color: $text-accent-color;
             // }
 
-            // .item_bottom{
-            //     border-top: $border_accent;
+            .item_bottom{
+                border-top: $border_accent;
 
-            //     .button{
-            //         background-color: $text-accent-color;
+                .button{
+                    // background-color: #fff;
     
-            //         &:hover{
-            //             span{
-            //                 color: $text-accent-color;
-            //             }
-            //             &::before{
-            //                 background-color: #fff;
-            //              }
-            //         }
-            //     }
-            // }
+                    &:hover{
+                        span{
+                            color: $text-accent-color;
+                        }
+                        &::before{
+                            background-color: #fff;
+                         }
+                    }
+                }
+            }
+
+            &.no_active{
+    
+                .number{
+                    background-color: $text-color;
+                }
+    
+                .item_bottom{
+                    border-top: $border;
+    
+                    .button{
+                        background-color: $text-color;
+        
+                        &:hover{
+                            span{
+                                color:$text-color;
+                            }
+                            &::before{
+                                background-color: #fff;
+                             }
+                        }
+                    }
+                }
+            }
         }
 
 
