@@ -23,6 +23,14 @@
     }
 }
 
+@media screen and (max-width:460px) {
+    .personal_accaunt_page{
+        .personal_comments{
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        }
+    }
+}
+
 .personal_information{
     border-bottom: $border;
 
@@ -52,6 +60,7 @@
 
             .text{
                 padding-left: 60px;
+                padding-right: 10px;
                 .name{
                     text-transform: capitalize;
                     font-size: 24px;
@@ -63,6 +72,7 @@
                     font-size: 16px;
                     margin-bottom: 20px;
                     display: block;
+                    text-transform: capitalize;
 
                     .blue{
                         color: $text-accent-color;
@@ -80,6 +90,10 @@
                 margin: 50px 5px 0 5px;
                 fill: #000;
                 transform: translateX(-5px);
+            }
+
+            p{
+                width: 95%;
             }
         }
     }
@@ -101,12 +115,13 @@
                 font-size: 24px;
                 width: 100%;
                 display: block;
+                text-transform: capitalize;
             }
             .number{
                 font-size: 64px;
                 margin-top: 40px;
                 display: block;
-            }
+            }  
 
             &:nth-child(1){
                 background-color: $red-accent-color;
@@ -120,6 +135,140 @@
             &:nth-child(4){
                 background-color: #000;
             }
+        }
+    }
+}
+@media screen and (max-width:1460px) {
+    .personal_accaunt_page .personal_statistic{
+
+        .item{
+
+            .title{
+                font-size: 20px;
+                width: 95%;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1290px){
+
+    .personal_accaunt_page .personal_statistic{
+
+        flex-wrap: wrap;
+        width: 30%;
+
+        .item{
+            width: 100%;
+            height: auto;
+            padding: 20px 0;
+
+            .title{
+                font-size: 20px;
+                width: 95%;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+    .personal_information .information{
+        width: 80%;
+    }
+    
+        .information .information_top_block .quorum_item{
+            width: 130px;
+        }
+}
+@media screen and (max-width:910px) {
+    .personal_information {
+
+        border-bottom: none;
+        .personal_inform_wrapper{
+            flex-wrap: wrap;
+        }
+    }
+
+    .personal_accaunt_page .personal_statistic{
+
+        flex-wrap: wrap;
+        width: 100%;
+        border: $border;
+        // margin-bottom: 20px;
+        .item{
+            width: 50%;
+        }
+    }
+    .personal_information .information{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:652px) {
+    .personal_information .information .information_top_block .quorum_item{
+        width: 120px;
+    }
+}
+@media screen and (max-width:520px) {
+    .personal_accaunt_page {
+        .personal_statistic {
+            .item {
+                .title{
+                    font-size: 14px;
+                }
+                .number{
+                    margin-top: 10px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .personal_information .information{
+        .information_top_block{
+            flex-wrap: wrap;
+            .quorum_item{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .text{
+                margin-top: 50px;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:450px) {
+    .personal_information .information{
+        .information_top_block{
+            flex-wrap: wrap;
+            .quorum_item{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .text{
+                margin-top: 50px;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
+    .personal_accaunt_page .personal_statistic{
+
+        flex-wrap: wrap;
+        width: 100%;
+        border: $border;
+        // margin-bottom: 20px;
+        .item{
+            width: 100%;
         }
     }
 }

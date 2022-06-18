@@ -67,10 +67,46 @@ h1, .h1, h2, .h2, h3, .h3{
 h1, .h1{
     font-size: 96px;
 }
+@media screen and (max-width:900px) {
+    .h1{
+        font-size: 75px;
+    }
+}
+@media screen and (max-width:700px) {
+    .h1{
+        font-size: 65px;
+    }
+}
+@media screen and (max-width:590px) {
+    .h1{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width:490px) {
+    .h1{
+        font-size: 35px;
+    }
+}
 
 h2, .h2{
     font-size: 48px;
     margin-bottom: 80px;
+}
+
+@media screen and (max-width:600px) {
+    h2, .h2{
+        font-size: 38px;
+    }
+}
+@media screen and (max-width:500px) {
+    h2, .h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:400px) {
+    h2, .h2{
+        font-size: 25px;
+    }
 }
 
 p{
@@ -263,13 +299,25 @@ p{
 
 .breadcrumbs{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
-    a, span{
+    // margin-bottom: -20px;
+    // padding-bottom: 20px;
+    li{
+        vertical-align: middle;
+        align-items: center;
+    }
+    a, 
+    span{
+        // margin-bottom: 20px;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 30px;
         text-transform: capitalize;
         color: #000;
+        // display: inline-block;
+        vertical-align: middle;
+        align-items: center;
         // color: #fff;
     }
     a:hover{
@@ -288,8 +336,15 @@ p{
     }
     .active{
         opacity: 60%;
+        margin-top: 5px;
     }
 }
+@media screen and (max-width:840px){
+    .breadcrumbs{
+        margin-top: 0px;
+    }
+}
+
 
 .pagination{
     width: 100%;
