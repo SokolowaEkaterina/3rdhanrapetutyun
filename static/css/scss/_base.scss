@@ -132,11 +132,6 @@ p{
 
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
-    input{
-        background-color: transparent;
-        text-transform: uppercase;
-        font-family: $main-font;
-    }
     span, input{
         text-transform: uppercase;
         width: 100%;
@@ -147,7 +142,19 @@ p{
         position: relative;
         z-index: 2;
 
+        padding: 0px;
+
         @include transition(all);
+    }
+
+    input{
+        background-color: transparent;
+        text-transform: uppercase;
+        font-family: $main-font;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        border: none;
     }
 
     &:hover{
@@ -196,6 +203,19 @@ p{
             }
         }
 
+    }
+
+    &.none_active{
+        background-color: #000;
+        opacity: 0.5;
+        cursor: auto;
+
+        &:hover{
+            &::before{
+                background-color: #000;
+                height: 0;
+            }
+        }
     }
 }
 
@@ -390,9 +410,14 @@ p{
     }
 }
 
+
+.likes{
+    // margin: 80px -10px 0 -10px;
+    
+}
 .like{
-    width: 60px;
-    display: block;
+    // width: 60px;
+    display: inline-block;
     opacity: 0.5;
     cursor: pointer;
     margin-top: 80px;
@@ -408,6 +433,14 @@ p{
 
     &.liked{
         opacity: 1;
+    }
+
+    &.dislike{
+
+        margin-left: 30px;
+        svg{
+            transform: rotate(180deg);
+        }
     }
 }
 // end base 

@@ -45,7 +45,7 @@
             display: flex;
             width: 100%;
 
-            .quorum_item{
+            .members_item{
                 cursor:auto;
                 width: 250px;
 
@@ -191,7 +191,7 @@
         width: 80%;
     }
     
-        .information .information_top_block .quorum_item{
+        .information .information_top_block .members_item{
             width: 130px;
         }
 }
@@ -220,7 +220,7 @@
 }
 
 @media screen and (max-width:652px) {
-    .personal_information .information .information_top_block .quorum_item{
+    .personal_information .information .information_top_block .members_item{
         width: 120px;
     }
 }
@@ -241,7 +241,7 @@
     .personal_information .information{
         .information_top_block{
             flex-wrap: wrap;
-            .quorum_item{
+            .members_item{
                 width: 50%;
                 margin-left: auto;
                 margin-right: auto;
@@ -259,7 +259,7 @@
     .personal_information .information{
         .information_top_block{
             flex-wrap: wrap;
-            .quorum_item{
+            .members_item{
                 width: 70%;
                 margin-left: auto;
                 margin-right: auto;

@@ -2,7 +2,7 @@
 .discussion_info{
     display: flex;
 
-    .quorum_item{
+    .members_item{
         margin-top: 33px;
         width: 160px;
 
@@ -142,7 +142,7 @@
             margin-left: 0;
         }
 
-        .quorum_item{
+        .members_item{
             order: 2;
             display: flex;
             width: 45%;
@@ -155,7 +155,7 @@
 }
 @media screen and (max-width:662px) {
     .discussion_info{
-        .quorum_item{
+        .members_item{
             width: 60%;
         }
     }
@@ -165,7 +165,7 @@
 }
 @media screen and (max-width:560px) {
     .discussion_info{
-        .quorum_item{
+        .members_item{
             width: 75%;
         }
     }
@@ -218,7 +218,7 @@
 }
 @media screen and (max-width:400px) {
     .discussion_info{
-        .quorum_item{
+        .members_item{
             width: 100%;
         }
     }

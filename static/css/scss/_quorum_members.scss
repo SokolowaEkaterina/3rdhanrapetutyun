@@ -14,7 +14,7 @@
         text-align: center;
     }
 
-    .quorum_block{
+    .members_block{
         display: flex;
         justify-content: space-between;
     }
@@ -27,7 +27,7 @@
     }
 }
 
-.quorum_item{
+.members_item{
     position: relative;
     width: calc(20% - 54px);
     z-index: 2;
@@ -163,25 +163,27 @@
 
 @media screen and (max-width:1250px) {
     .quorum_members{
-        .quorum_block{
+        .members_block{
             flex-wrap: wrap;
-            .quorum_item{
+            .members_item{
                 width: calc( 25% - 54px);
                 margin-bottom: 54px;
             }
         }
     }
 }
-@media screen and (max-width:1061px) {
+@media screen and (max-width:1180px) {
     .quorum_members{
-        .quorum_block{
-            justify-content: start;
-            margin: 0 - 27px;
+        .members_block{
+            // justify-content: start;
+            justify-content:normal;
+            margin: 0 -27px;
 
-            .quorum_item{
-                width: calc( 30% - 54px);
+            .members_item{
+                width: calc( 33% - 54px);
 
-                margin: 0 27px;
+                margin-left: 27px;
+                margin-right: 27px;
                 margin-bottom: 54px;
             }
         }
@@ -189,11 +191,11 @@
 }
 @media screen and (max-width:800px) {
     .quorum_members{
-        .quorum_block{
+        .members_block{
             justify-content: start;
             margin: 0 - 27px;
 
-            .quorum_item{
+            .members_item{
                 width: calc( 49% - 54px);
 
                 margin: 0 27px;
@@ -204,11 +206,11 @@
 }
 @media screen and (max-width:605px) {
     .quorum_members{
-        .quorum_block{
+        .members_block{
             justify-content: start;
             margin: 0 -20px;
 
-            .quorum_item{
+            .members_item{
                 width: 100%;
 
                 margin: 0 54px;
@@ -226,12 +228,12 @@
 ////////////////////////////////////////////////////////
 .quorum_members{
     &.quourm_page{
-        .quorum_block {
+        .members_block {
             flex-wrap: wrap;
             justify-content: start;
             margin: 0 -27px 200px -27px;
 
-            .quorum_item{
+            .members_item{
                 width: calc(19% - 54px);
                 margin: 27px 27px;
             }
@@ -242,9 +244,9 @@
 @media screen and (max-width:1210px) {
     .quorum_members{
         &.quourm_page{
-            .quorum_block {
+            .members_block {
 
-                .quorum_item{
+                .members_item{
                     width: calc(24% - 54px);
                 }
             }
@@ -254,9 +256,9 @@
 @media screen and (max-width:980px) {
     .quorum_members{
         &.quourm_page{
-            .quorum_block {
+            .members_block {
 
-                .quorum_item{
+                .members_item{
                     width: calc(32% - 54px);
                 }
             }
@@ -266,9 +268,9 @@
 @media screen and (max-width:650px) {
     .quorum_members{
         &.quourm_page{
-            .quorum_block {
+            .members_block {
 
-                .quorum_item{
+                .members_item{
                     width: calc(47% - 54px);
                 }
             }

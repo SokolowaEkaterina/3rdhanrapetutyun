@@ -49,7 +49,16 @@ $(document).ready(function() {
     });
 
     $('.like').click(function(){
-        $(this).toggleClass('liked');
+        if($('.like').hasClass('liked')){
+            $('.like').removeClass('liked');
+        }else{
+            $('.like').removeClass('liked');
+            $(this).addClass('liked');
+            // $(this).addClass('liked');
+            // $(~'.like').removeClass('liked');
+        }
+        // $(this).toggleClass('liked');
+
     });
 
     $('.main_screen_slider').slick({
