@@ -676,7 +676,7 @@ header::before {
   background-color: #fff;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1130px) {
   .header_block nav .menu a {
     margin: 0px 20px;
   }
@@ -685,7 +685,7 @@ header::before {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1040px) {
   header::before {
     display: none;
   }
@@ -764,12 +764,17 @@ header::before {
     color: #000;
   }
 }
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 850px) {
+  .header_block nav {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 730px) {
   .header_block nav {
     width: 100%;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 510px) {
   .header_block nav .top_nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -778,6 +783,7 @@ header::before {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding: 0;
   }
   .header_block nav .top_nav a.button {
     display: inline-block;
@@ -791,6 +797,11 @@ header::before {
             order: 3;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+@media screen and (max-width: 343px) {
+  .header_block nav .top_nav a.button {
+    padding: 11px 20px;
   }
 }
 .main_screen {
@@ -817,7 +828,7 @@ header::before {
      object-position: center;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1040px) {
   .main_screen {
     margin-top: 109px;
   }

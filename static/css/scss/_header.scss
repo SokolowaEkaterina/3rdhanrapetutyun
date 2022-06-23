@@ -264,7 +264,7 @@ header{
 }
 
 
-@media screen and (max-width:920px){
+@media screen and (max-width:1130px){
     .header_block{
         nav .menu{
             a{
@@ -280,7 +280,7 @@ header{
     }
 }
 
-@media screen and (max-width:840px) {
+@media screen and (max-width:1040px) {
     header{
         &::before{
             display: none;
@@ -376,12 +376,17 @@ header{
     }
 }
 
-@media screen and (max-width:710px) {
+@media screen and (max-width:850px) {
+    .header_block nav{
+        width: 70%;
+    }
+}
+@media screen and (max-width:730px) {
     .header_block nav{
         width: 100%;
     }
 }
-@media screen and (max-width:410px) {
+@media screen and (max-width:510px) {
     .header_block{
         nav .top_nav{
             // text-align: left;
@@ -389,6 +394,7 @@ header{
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-around;
+            padding: 0;
             // vertical-align: middle;
 
             a.button{
@@ -404,6 +410,11 @@ header{
                 justify-content: space-around;
             }
         }
+    }
+}
+@media screen and (max-width:343px) {
+    .header_block nav .top_nav a.button{
+        padding: 11px 20px;
     }
 }
 // end header 
