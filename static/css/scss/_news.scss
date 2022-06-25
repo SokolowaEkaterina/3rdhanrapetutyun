@@ -1,0 +1,35 @@
+.news_wrapper{
+
+}
+.news_item{
+    width: 100%;
+    margin-bottom: 80px;
+    .date{
+        display: block;
+        background-color: $orange-accent-color;
+        color: #fff;
+        padding: 30px;
+        width: 260 / 1520 * 100%;
+        box-sizing: border-box;
+    }
+    .text{
+      display: block;   
+      color: #000;   
+      border: 3px solid $orange-accent-color;
+      padding: 30px;
+      width: 1380 / 1520 * 100%;
+      margin-left: auto;
+      box-sizing: border-box;
+
+      margin-top: 25px;
+    }
+
+    &:first-child{
+        .date{
+            background-color: $red-accent-color;
+        }
+        .text{
+            border: 3px solid $red-accent-color;
+        }
+    }
+}

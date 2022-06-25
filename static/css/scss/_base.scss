@@ -121,6 +121,7 @@ p{
     text-align: center;
 }
 .button{
+    cursor: pointer;
     display: inline-block;
     padding: 20px;
     // overflow: hidden;
@@ -442,5 +443,16 @@ p{
             transform: rotate(180deg);
         }
     }
+}
+
+
+
+
+
+
+.edit{
+    border-bottom: $border;
+
+    text-align: right;
 }
 // end base 
