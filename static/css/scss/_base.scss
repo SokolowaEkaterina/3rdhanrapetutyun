@@ -663,4 +663,18 @@ p{
         }
     }
 }
+
+
+
+
+
+.notification{
+    display: block;
+    width: 70%;
+    margin: 100px auto 0 auto;
+    padding: 40px 20px;
+    border: $border-accent;
+    text-align: center;
+    color: $text-accent-color;
+}
 // end base 
