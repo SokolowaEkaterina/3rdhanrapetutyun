@@ -1,3 +1,4 @@
+// start news 
 .news_wrapper{
 
 }
@@ -33,3 +34,22 @@
         }
     }
 }
+
+@media screen and (max-width:920px) {
+    .news_item{
+        .date{
+            width: 25%;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .news_item{
+        .date{
+            width: 190px;
+        }
+        .text{
+          width: 100%;
+        }
+    }
+}
+// end news 

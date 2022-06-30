@@ -26,7 +26,6 @@
             padding-bottom: 50px;
 
             // padding: 54px 30px 0 30px;
-
             .circle{
                 background-color:$text-color;
                 background-image: none;
@@ -276,7 +275,100 @@
             }
         }
 
-    }
+}
+
+
+// .suggestions_page{
+//     .item{
+//         border: $border;
+//         color: $text-color;
+
+//         @include transition(all);
+
+//         margin: 0 20px;
+
+//         padding-bottom: 50px;
+
+//         // padding: 54px 30px 0 30px;
+
+//         .circle{
+
+//             &.flag{
+//                 opacity: 1;
+//                 background-image: $main_garadient;
+
+//                 @include transition(all);
+//             }
+//         }
+
+//         .number{
+//             display: inline-block;
+//             // background-color: $text-color;
+
+//             background-color: $text-accent-color;
+//             padding: 12px 14px;
+//             color: #fff;
+
+//             @include transition(all);
+//         }
+
+//         .info{
+//             margin-top: 54px;
+//             margin-bottom: 40px;
+//             .info_item{
+//                 display: block;
+//                 margin-bottom: 10px;
+//                 font-size: 12px;
+//                 text-transform: capitalize;
+//             }
+//         }
+
+//         .title, p, .info{
+//             padding: 0 30px 0 30px;
+//             @include transition(all);
+//         }
+
+//         p{
+//             margin-bottom: 50px;
+//         }
+
+//         .title{
+//             display: block;
+//             font-size: 20px;
+//         }
+
+//         .item_bottom{
+//             // border-top: $border;
+//             display: flex;
+//             justify-content: space-between;
+
+//             border-top: $border_accent;
+//             // margin-top: 50px;
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             width: 100%;
+//             // height: 200px;
+
+//             .button{
+//                 // float: right;
+//                 @include transition(all);
+//                 background-color: $text-accent-color;
+//             }
+
+//             .like{
+//                 margin: 0px;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
 
     .arrow_button{
         margin-top: -40px;
@@ -387,105 +479,105 @@
 .discussions_page{
     display: flex;
 
-    .filter{
-        position: relative;
-        .filter_button{
-            font-size: 24px;
+    // .filter{
+    //     position: relative;
+    //     .filter_button{
+    //         font-size: 24px;
 
-            position: absolute;
-            top: 35px;
-            left: 0;
-            text-transform: uppercase;
+    //         position: absolute;
+    //         top: 35px;
+    //         left: 0;
+    //         text-transform: uppercase;
 
-            cursor: pointer;
+    //         cursor: pointer;
 
-            @include transition(all);
-            padding-left: 30px;
+    //         @include transition(all);
+    //         padding-left: 30px;
 
-            &:hover{
-                color: $text-accent-color;
-                &::before{
-                    border-bottom: $border_accent;
-                    border-right: $border_accent;
+    //         &:hover{
+    //             color: $text-accent-color;
+    //             &::before{
+    //                 border-bottom: $border_accent;
+    //                 border-right: $border_accent;
 
-                }
-            }
+    //             }
+    //         }
 
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin-top: -15px;
-                width: 15px;
-                height: 15px;
-                background-color: transparent;
-                transform: rotate(45deg);
-                border-bottom: $border;
-                border-right: $border;
+    //         &::before{
+    //             content: '';
+    //             position: absolute;
+    //             left: 0;
+    //             top: 50%;
+    //             margin-top: -15px;
+    //             width: 15px;
+    //             height: 15px;
+    //             background-color: transparent;
+    //             transform: rotate(45deg);
+    //             border-bottom: $border;
+    //             border-right: $border;
 
-                @include transition(all);
-            }
-        }
+    //             @include transition(all);
+    //         }
+    //     }
 
-        .filter_items{
-            transform: translateX(-200%);
-            display: none;
-            // position: absolute;
-            margin-top: 131px;
-            width: 355px;
-            box-sizing: border-box;
-            overflow: hidden;
+    //     .filter_items{
+    //         transform: translateX(-200%);
+    //         display: none;
+    //         // position: absolute;
+    //         margin-top: 131px;
+    //         width: 355px;
+    //         box-sizing: border-box;
+    //         overflow: hidden;
 
-            transition: 1s linear transform;
+    //         transition: 1s linear transform;
 
-            label{
-                display: block;
-                text-transform: capitalize;
-                margin: 20px 0 12px 0;
-            }
+    //         label{
+    //             display: block;
+    //             text-transform: capitalize;
+    //             margin: 20px 0 12px 0;
+    //         }
 
-            input{
-                box-sizing: border-box;
-                padding: 10px 30px 10px 10px;
-                width: 101%;
-                border: $border;
-                border-right: 3px solid transparent;
+    //         input{
+    //             box-sizing: border-box;
+    //             padding: 10px 30px 10px 10px;
+    //             width: 101%;
+    //             border: $border;
+    //             border-right: 3px solid transparent;
 
-                @include transition(all);
+    //             @include transition(all);
 
-                &:hover,
-                &:focus{
-                    border: $border_accent;
-                }
-            }
+    //             &:hover,
+    //             &:focus{
+    //                 border: $border_accent;
+    //             }
+    //         }
 
-            .button{
-                margin-top: 40px;
-                input{
-                    padding: 0px;
-                    border: none;
-                }
-            }
-        }
+    //         .button{
+    //             margin-top: 40px;
+    //             input{
+    //                 padding: 0px;
+    //                 border: none;
+    //             }
+    //         }
+    //     }
 
-        &.active{
-            border-right: $border;
-            margin-right: 33px;
+    //     &.active{
+    //         border-right: $border;
+    //         margin-right: 33px;
 
-            .filter_button{
-                &::before{
-                    transform: rotate(225deg);
-                    margin-top: -5px;
-                }
-            }
+    //         .filter_button{
+    //             &::before{
+    //                 transform: rotate(225deg);
+    //                 margin-top: -5px;
+    //             }
+    //         }
 
-            .filter_items{
-                display: block;
-                transform: translateX(0%);
-            }
-        }
-    }
+    //         .filter_items{
+    //             display: block;
+    //             transform: translateX(0%);
+    //         }
+    //     }
+    // }
 
     .discussion_wrapper{
         padding-bottom: 100px;
@@ -495,4 +587,125 @@
         }
     }
 }
+
+
+
+
+
+.suggestions_page .discussions .discussions_block{
+    .item{
+        border: $border;
+        color: $text-color;
+
+        .circle{
+            &.flag{
+                opacity: 0;
+            }
+        }
+
+        .number{
+            background-color: $text-color;
+        }
+
+        .item_bottom{
+            border-top: $border;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .likes{
+                margin-left: 10px;
+            }
+
+            .like{
+                margin-top: 0px;
+                svg{
+                    width: 15px;
+                    // height: 40px;
+                    fill: #000;
+                }
+
+                span{
+                    font-size: 14px;
+                    color: #000;
+                }
+            }
+
+            .button{
+                background-color: $text-color;
+            }
+        }
+    }
+
+    .item:hover{
+
+
+        .item_bottom{
+            border-top: $border;
+
+            .button{
+
+                &:hover{
+                    span{
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+
+        &.no_active{
+
+            .number{
+                background-color: $text-color;
+            }
+
+            .item_bottom{
+                border-top: $border;
+
+                .button{
+                    background-color: $text-color;
+    
+                    &:hover{
+                        span{
+                            color:$text-color;
+                        }
+                        &::before{
+                            background-color: #fff;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.suggestions_page .pagination{
+    margin-top: 150px;
+}
+
+@media screen and (max-width:450px) {
+    .suggestions_page .discussions .discussions_block{
+        .item{
+
+            p{
+                margin-bottom: 120px;
+            }
+    
+            .item_bottom{
+                flex-wrap: wrap;
+    
+                .likes{
+                    padding: 10px 0px;
+                }
+    
+                .button{
+                    width: 100%;
+                    text-align: center;
+                    background-color: $text-color;
+                }
+            }
+        }
+    }
+}
+
 // end discussions 
