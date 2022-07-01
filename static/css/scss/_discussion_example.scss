@@ -131,7 +131,7 @@
         width: 100%;
     }
 }
-@media screen and (max-width:742px) {
+@media screen and (max-width:773px) {
     .discussion_info{
         flex-wrap: wrap;
 
@@ -170,7 +170,7 @@
         }
     }
 }
-@media screen and (max-width:532px) {
+@media screen and (max-width:563px) {
     .discussion_info{
         .info_block{
             .item{
@@ -184,13 +184,15 @@
                     align-items: flex-start;
                 }
 
-                &:nth-child(1),
-                &:nth-child(2){
-                    width: 27.5%;
+                &:nth-child(1){
+                    width: 20%;
+                }
+                &:nth-child(3){
+                    width: 40%;
                 }
 
-                &:nth-child(3){
-                    width: 45%;
+                &:nth-child(2){
+                    width: 40%;
                 }
             }
         }
