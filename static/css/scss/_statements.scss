@@ -92,11 +92,12 @@
     }
 }
 
-@media screen and (max-width:1380px){
+@media screen and (max-width:1470px) {
     .statements_block .item .hiddne_block{
-        font-size: 70px;
+        font-size: calc(100vw / 20);
     }
 }
+
 @media screen and (max-width:1100px){
     .statements{
         .circle_2{
@@ -107,13 +108,9 @@
             bottom: -30px;
         }
     }
-    
-// .circle_4
-// .circle_5
 }
 @media screen and (max-width:934px){
     .statements_block .item .hiddne_block{
-        font-size: 58px;
         width: 90%;
     }
 
@@ -169,24 +166,13 @@
     }
 
     .statements_block .item .hiddne_block{
-        font-size: 40px;
+        font-size: calc(100vw / 15);
         width: 100%;
     }
 }
-@media screen and (max-width:500px){
-    .statements_block .item .hiddne_block{
-        font-size: 35px;
-    }
-}
-@media screen and (max-width:450px){
-    .statements_block .item .hiddne_block{
-        font-size: 33px;
-    }
-}
+
 @media screen and (max-width:410px){
-    .statements_block .item .hiddne_block{
-        font-size: 30px;
-    }
+  
     .statements{
         padding-bottom: 200px;
         padding-top: 50px;
@@ -195,9 +181,5 @@
         }
     }
 }
-@media screen and (max-width:375px){
-    .statements_block .item .hiddne_block{
-        font-size: 26px;
-    }
-}
+
 // end statements 

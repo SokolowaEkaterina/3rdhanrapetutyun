@@ -227,6 +227,8 @@ p{
 .arrow_but{
     position: relative;
 
+    padding-right: 100px;
+
 
     &::after{
         content: '';
@@ -240,17 +242,6 @@ p{
         transform: rotate(-45deg) translateY(-50%);
         z-index: 2;
     }
-    // &::before{
-    //     content: '';
-    //     position: absolute;
-    //     right: 27px;
-    //     left: auto;
-    //     top: 50%;
-    //     width: 40%;
-    //     height: 4px;
-    //     background-color: #fff;
-    //     z-index: 2;
-    // }
 }
 .arrow_button{
     display: block;
@@ -446,10 +437,25 @@ p{
 }
 
 
-.likes{
-    // margin: 80px -10px 0 -10px;
-    
+
+
+
+
+
+
+
+.discussion_page{
+    .likes{
+        margin: 0 auto;
+        text-align: center;
+        
+    } 
 }
+
+// .likes{
+//     // margin: 80px -10px 0 -10px;
+    
+// }
 .like{
     // width: 60px;
     display: inline-block;
@@ -504,7 +510,18 @@ p{
 }
 
 
+.percent{
+    display: block;
+    margin: 50px auto 0 auto;
+    text-align: center;
 
+    .big{
+        margin-top: 20px;
+        font-size: 40px;
+        display: block;
+        color: $text-accent-color;
+    }
+}
 
 
 
@@ -664,10 +681,73 @@ p{
     }
 }
 
+@media screen and (max-width:850px) {
+    .discussions_page,
+    .members_page{
+        .filter{
+
+            .filter_items{
+                width: 255px;
+            }
+
+            
+        }
+    }
+}
+@media screen and (max-width:670px) {
+    .discussions_page,
+    .members_page{
+        flex-wrap: wrap;
+    }
+    .discussions_page,
+    .members_page{
+        .filter{
+            width: 100%;
+            padding-bottom: 50px;
+
+            .filter_items{
+                width: 100%;
+
+                input,
+                select{
+                    width: 100%;
+                    border-right: 3px solid #000;
+                }
+            }
+
+            &.active{
+                border-right: none;
+                // border-bottom: $border;
+                // border-left: $border;
+                background-color: #fff;
+                margin-right: 0px;
+                // padding: 0px 0 20px 0 ;
+                &::after{
+                    content: '';
+                    width: 400%;
+                    left: -100%;
+                    height: 3px;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
 
 
 
 
+
+
+
+
+
+.border_buttom{
+    padding-bottom: 100px;
+    border-bottom: $border_accent;
+}
 .notification{
     display: block;
     width: 70%;
@@ -676,5 +756,12 @@ p{
     border: $border-accent;
     text-align: center;
     color: $text-accent-color;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:850px) {
+    .notification{
+        width: 100%;
+    }
 }
 // end base 
