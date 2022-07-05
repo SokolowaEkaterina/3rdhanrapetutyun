@@ -2972,6 +2972,11 @@ footer .footer_block {
     width: 100%;
   }
 }
+.comment_wrapper {
+  padding-top: 100px;
+  border-top: 3px solid #000;
+}
+
 .comments {
   width: 65%;
 }
