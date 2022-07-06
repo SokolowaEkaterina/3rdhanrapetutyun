@@ -34,6 +34,7 @@
                 top: -17px;
                 width: 107px;
                 height: 107px;
+                z-index: -1;
 
                 @include transition(all);
 

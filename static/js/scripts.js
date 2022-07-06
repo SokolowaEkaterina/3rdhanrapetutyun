@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+    // pop_up
+    $("a.myLinkModal").click(function (event) {
+        event.preventDefault();
+        $("#myOverlay").fadeIn(297, function () {
+            $("#myModal")
+                .css("display", "block")
+                .animate({ opacity: 1 }, 198);
+        });
+    });
+
+    $("#myModal__close, #myOverlay").click(function () {
+        $("#myModal").animate({ opacity: 0 }, 198, function () {
+            $(this).css("display", "none");
+            $("#myOverlay").fadeOut(297);
+        });
+    });
+    /////////
+
+
+
+
+
+
 //   // добавляем класс в шапку при скролле
 // 	$(window).on('load scroll resize', function(){
 // 		//var height = $(window).height() - 100;
@@ -9,6 +32,11 @@ $(document).ready(function() {
 // 		    $('#header').removeClass('scroll');
 // 		} 
 // 	});
+
+
+
+
+
   
   // добавляем класс в пункты с подменю
   $('ul.menu > li').each(function(){
@@ -38,6 +66,15 @@ $(document).ready(function() {
                 $('nav').addClass('slid_active');
             }
         });
+
+    //more
+    $('.more').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+        }
+    });
     
     // filter button 
     $('.filter_button').click(function(){
@@ -122,48 +159,28 @@ $(document).ready(function() {
           }
       });
 
-  // category
-    //   $(window).on('load resize', function() {
-    //     if ($(window).width() < 967) {
-    //       $('.category').slick({
-    //         // centerMode: true,
-    //         arrows: true,
-    //         slidesToShow: 3,
-    //         responsive: [
-    //           {
-    //             breakpoint: 355,
-    //             settings: {
-    //               slidesToShow: 2,
-    //               slidesToScroll: 1,
-    //             }
-    //           }
-    //         ]
-    //       });
-    //     } else {
-    //       $('.category').slick('unslick');
+    
+    // var show = true;
+    // var countbox = ".benefits__inner";
+    // $(window).on("scroll load resize", function () {
+    //     if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+    //     var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+    //     var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+    //     var w_height = $(window).height(); // Высота окна браузера
+    //     var d_height = $(document).height(); // Высота всего документа
+    //     var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+    //     if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+    //         $('.benefits__number').css('opacity', '1');
+    //         $('.benefits__number').spincrement({
+    //             thousandSeparator: "",
+    //             duration: 1200
+    //         });
+             
+    //         show = false;
     //     }
     // });
 
-    
-    var show = true;
-    var countbox = ".benefits__inner";
-    $(window).on("scroll load resize", function () {
-        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-        var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-        var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-        var w_height = $(window).height(); // Высота окна браузера
-        var d_height = $(document).height(); // Высота всего документа
-        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-            $('.benefits__number').css('opacity', '1');
-            $('.benefits__number').spincrement({
-                thousandSeparator: "",
-                duration: 1200
-            });
-             
-            show = false;
-        }
-    });
+
 
 });
 
@@ -233,3 +250,19 @@ for (let i = 0; i < circle_7.length; i++){
         circle_7[i].style.transform = 'translate(-' + x * 80 + 'px, -' + y * 100 + 'px)';
     });    
 }
+
+
+
+//     const openPopUp = document.querySelectorAll('pop_up_open');
+// const closePopUp = document.querySelectorAll('pop_up_close');
+// const popUp = document.querySelectorAll('pop_up');
+
+// openPopUp.addEventListener('click', function(e){
+//     e.preventDefault();
+//     // popUp.addClass('active');
+//     popUp.classList.add('active');
+// })
+
+// closePopUp.addEventListener('click' , function() {
+//     popUp.classList.remove('active');
+// })

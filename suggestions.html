@@ -72,7 +72,7 @@
     <!-- end header -->
 
         <!-- start main_screen  -->
-        <div class="main_screen img_wrapper other_main_screen">
+    <div class="main_screen img_wrapper other_main_screen less_button">
             <div class="circle circle_1"></div>
             <div class="circle circle_150 circle_2"></div>
             <div class="circle circle_50 circle_3"></div>
@@ -86,22 +86,137 @@
         </div>
         <div class="page_width">
             <div class="h1">առաջարկներ</div>
+
+            <a href="make_an_offer.html" class="button">
+                <span>անել առաջարկ</span>
+            </a>
         </div>
     </div>
     <!-- end main_screen  -->
 
+
+    <div id="myModal">
+        <div class="pop_up_container">
+            <div class="pop_up_body">
+                <span class="h2">Իսկապե՞ս ուզում եք ջնջել առաջարկը:</span>
+                <div id="myModal__close" class="button close">
+                    <span>Ոչ</span>
+                </div>
+                <div class="button">
+                    <span>Այո՛</span>
+                </div>
+            </div>
+        </div>
+        <!-- <span id="myModal__close" class="close">ₓ</span> -->
+    </div>
+
+    <div id="myOverlay"></div>
+
+
     <!-- start content  -->
     <div class="page_width">
         <span class="notification">
-            <p>«Առաջարկ» և  «Քվեարկում» բաժինները գործառնական առումով փոխկապակցված են: Շարժման ցանկացած անդամ կարող է առաջարկ ներկայացնել քննարկման, և հետագայում, որպես որոշում, ընդունվելու համար:</p>
+            <p>«Առաջարկ» և  «Քվեարկում» բաժինները գործառնական առումով փոխկապակցված են: Շարժման ցանկացած անդամ կարող է քննարկման առաջարկ ներկայացնել:</p>
 
-            <p>«Առաջարկ» բաժնում ներկայացված առաջարկությունը քննարկվում է Շարժման անդամների կողմից, որտեղ կարծիքներ փոխանակելու համար կա հնարավորություն: Երբ առաջարկը հավանության է արժանանում անդամների առնվազն 20% կողմից, առաջարկը տեղափոխվում է «Քվեարկում» բաժին և անդամների 50%+1 հավանում արժանանալու դեպքում դառնում է պարտադիր որոշում: Առաջարկը քվեարկելու համար տրամադրվում է 5 օր ժամանակ: Անհրաժեշտ ձայներ չհավաքելու դեպքում այդ դառնում է անվավեր: Նույնը վերաբերվում է քվեարկությանը, 5 օրվա ընթացքում անհրաժեշտ ձայն չհավաքելու դեպքում այն դառնում է անվավեր:</p>
-
-            <p>«Առաջարկ» բաժնում տեղադրված առաջարկությունը կարող է լինել ինչպես որևէ գործողության, կամ կանոնակարգի փոփոխության նախագիծ: Առաջարկը չի կարող գերազանցել 255 նիշը, սակայն նրան կարող է կցվել մանրամասն ու հիմնավոր բացատրություններով ֆայլ:</p>
+            <p>«Առաջարկ» բաժնում ներկայացված առաջարկությունը քննարկվում է Շարժման անդամների կողմից, որտեղ կարծիքներ փոխանակելու հնարավորություն կա: Երբ առաջարկը հավանության է արժանանում անդամների առնվազն 20% կողմից, առաջարկը տեղափոխվում է «Քվեարկում» բաժին և անդամների 50%+1 հավանում արժանանալու դեպքում դառնում է որոշում: </p>
+        
+            <p>Առաջարկը քվեարկելու համար տրամադրվում է 5 օր ժամանակ: Անդամների 20% ձայն չհավաքելու դեպքում այդ դառնում է անվավեր: Նույնը վերաբերվում է քվեարկությանը, 5 օրվա ընթացքում անհրաժեշտ ձայն չհավաքելու դեպքում այն դառնում է անվավեր:</p>
+        
+            <p>«Առաջարկ» բաժնում տեղադրված առաջարկությունը կարող է լինել ինչպես որևէ գործողության, կամ կանոնակարգի փոփոխության նախագիծ: Առաջարկի վերնագիրը չի կարող գերազանցել 255, իսկ տեքստը՝ 4 000 նիշը, սակայն նրան կարող է կցվել մանրամասն ու հիմնավոր բացատրություններով ֆայլ: </p>
+        
+            <p>Առաջարկը տեղադրվելուց հետո չի կարող խմբագրվել: Քննարկման արդյունքում, եթե հեղինակը փոփոխությունների է ենթարկում առաջարկը, ապա այն պետք է հանի քննարկումից և նոր առաջարկ տեղադրի:</p>
         </span>
         <div class="suggestions_page margin">
             <div class="discussions discussion_wrapper">
                 <div class="discussions_block">
+                    <div class="item">
+                        <div class="more">
+                            <span class="dote"></span>
+                            <div class="content">
+                                <a class="myLinkModal" href="#">ջնջել առաջարկը</a>
+                            </div>
+                        </div>
+
+                        <a href="suggestion_exemple.html">
+                            <div class="circle"></div>
+                            <div class="circle circle1"></div>
+                            <div class="circle circle2"></div>
+                            <div class="circle flag"></div>
+                            <div class="circle circle1 flag"></div>
+                            <div class="circle circle2 flag"></div>
+                            <span class="number">№23</span>
+                            <div class="info">
+                                <span class="info_item">տեսակ : ակտիվ</span>
+                                <span class="info_item">Գաբրիել Բաշինժագյան</span>
+                                <span class="info_item">23/05/22 - 23/08/22</span>
+                            </div>
+                            <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
+                            <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
+                            <div class="item_bottom">
+                                <div class="likes">
+                                    <span class="like">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>32 կողմ</span>
+                                    </span>
+                                    <span class="like dislike">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>15 դեմ</span>
+                                    </span>
+                                </div>
+                                <div href="discussion_example.html" class="button">
+                                    <span>քննարկում</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="more">
+                            <span class="dote"></span>
+                            <div class="content">
+                                <a class="myLinkModal" href="#">ջնջել առաջարկը</a>
+                            </div>
+                        </div>
+
+                        <a href="suggestion_exemple.html">
+                            <div class="circle"></div>
+                            <div class="circle circle1"></div>
+                            <div class="circle circle2"></div>
+                            <div class="circle flag"></div>
+                            <div class="circle circle1 flag"></div>
+                            <div class="circle circle2 flag"></div>
+                            <span class="number">№23</span>
+                            <div class="info">
+                                <span class="info_item">տեսակ : ակտիվ</span>
+                                <span class="info_item">Գաբրիել Բաշինժագյան</span>
+                                <span class="info_item">23/05/22 - 23/08/22</span>
+                            </div>
+                            <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
+                            <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
+                            <div class="item_bottom">
+                                <div class="likes">
+                                    <span class="like">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>32 կողմ</span>
+                                    </span>
+                                    <span class="like dislike">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>15 դեմ</span>
+                                    </span>
+                                </div>
+                                <div href="discussion_example.html" class="button">
+                                    <span>քննարկում</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <a href="suggestion_exemple.html" class="item">
                         <div class="circle"></div>
                         <div class="circle circle1"></div>
@@ -242,111 +357,50 @@
                             </div>
                         </div>
                     </a>
-                    <a href="suggestion_exemple.html" class="item">
-                        <div class="circle"></div>
-                        <div class="circle circle1"></div>
-                        <div class="circle circle2"></div>
-                        <div class="circle flag"></div>
-                        <div class="circle circle1 flag"></div>
-                        <div class="circle circle2 flag"></div>
-                        <span class="number">№23</span>
-                        <div class="info">
-                            <span class="info_item">տեսակ : ակտիվ</span>
-                            <span class="info_item">Գաբրիել Բաշինժագյան</span>
-                            <span class="info_item">23/05/22 - 23/08/22</span>
-                        </div>
-                        <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
-                        <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
-                        <div class="item_bottom">
-                            <div class="likes">
-                                <span class="like">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>32 կողմ</span>
-                                </span>
-                                <span class="like dislike">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>15 դեմ</span>
-                                </span>
-                            </div>
-                            <div href="discussion_example.html" class="button">
-                                <span>քննարկում</span>
+                    <div class="item">
+                        <div class="more">
+                            <span class="dote"></span>
+                            <div class="content">
+                                <a class="myLinkModal" href="#">ջնջել առաջարկը</a>
                             </div>
                         </div>
-                    </a>
-                    <a href="suggestion_exemple.html" class="item">
-                        <div class="circle"></div>
-                        <div class="circle circle1"></div>
-                        <div class="circle circle2"></div>
-                        <div class="circle flag"></div>
-                        <div class="circle circle1 flag"></div>
-                        <div class="circle circle2 flag"></div>
-                        <span class="number">№23</span>
-                        <div class="info">
-                            <span class="info_item">տեսակ : ակտիվ</span>
-                            <span class="info_item">Գաբրիել Բաշինժագյան</span>
-                            <span class="info_item">23/05/22 - 23/08/22</span>
-                        </div>
-                        <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
-                        <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
-                        <div class="item_bottom">
-                            <div class="likes">
-                                <span class="like">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>32 կողմ</span>
-                                </span>
-                                <span class="like dislike">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>15 դեմ</span>
-                                </span>
+
+                        <a href="suggestion_exemple.html">
+                            <div class="circle"></div>
+                            <div class="circle circle1"></div>
+                            <div class="circle circle2"></div>
+                            <div class="circle flag"></div>
+                            <div class="circle circle1 flag"></div>
+                            <div class="circle circle2 flag"></div>
+                            <span class="number">№23</span>
+                            <div class="info">
+                                <span class="info_item">տեսակ : ակտիվ</span>
+                                <span class="info_item">Գաբրիել Բաշինժագյան</span>
+                                <span class="info_item">23/05/22 - 23/08/22</span>
                             </div>
-                            <div href="discussion_example.html" class="button">
-                                <span>քննարկում</span>
+                            <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
+                            <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
+                            <div class="item_bottom">
+                                <div class="likes">
+                                    <span class="like">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>32 կողմ</span>
+                                    </span>
+                                    <span class="like dislike">
+                                        <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
+                                        </svg>
+                                        <span>15 դեմ</span>
+                                    </span>
+                                </div>
+                                <div href="discussion_example.html" class="button">
+                                    <span>քննարկում</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="suggestion_exemple.html" class="item">
-                        <div class="circle"></div>
-                        <div class="circle circle1"></div>
-                        <div class="circle circle2"></div>
-                        <div class="circle flag"></div>
-                        <div class="circle circle1 flag"></div>
-                        <div class="circle circle2 flag"></div>
-                        <span class="number">№23</span>
-                        <div class="info">
-                            <span class="info_item">տեսակ : ակտիվ</span>
-                            <span class="info_item">Գաբրիել Բաշինժագյան</span>
-                            <span class="info_item">23/05/22 - 23/08/22</span>
-                        </div>
-                        <span class="title">Քննարկման համառոտ նկարագրությունը. Այն հայտնի դարձավ 1960-ականներին՝ թողարկվելով</span>
-                        <p>Քննարկման համառոտ նկարագրությունը. Այն հանրաճանաչ դարձավ 1960-ականներին՝ թողարկելով Letraset թերթերը, որոնք պարունակում էին ը, ներառյալ Lorem Ipsum-ի տարբերակները:</p>
-                        <div class="item_bottom">
-                            <div class="likes">
-                                <span class="like">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>32 կողմ</span>
-                                </span>
-                                <span class="like dislike">
-                                    <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 39L13.5 2L10.5 2L10.5 39L13.5 39Z" />
-                                    </svg>
-                                    <span>15 դեմ</span>
-                                </span>
-                            </div>
-                            <div href="discussion_example.html" class="button">
-                                <span>քննարկում</span>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="pagination">
