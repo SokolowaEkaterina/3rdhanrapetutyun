@@ -109,6 +109,10 @@ h2, .h2{
     }
 }
 
+h3, .h3{
+    font-size: 38px;
+}
+
 p{
     font-size: 14px;
     line-height: 20px;
@@ -804,6 +808,7 @@ p{
     height: 60px;
     float: right;
     padding: 30px 30px 0 30px;
+    margin-right: 5px;
     box-sizing: border-box;
     // text-align: center;
     cursor: pointer;
@@ -819,14 +824,25 @@ p{
         // right: -150%;
         top: 43px;
         display: block;
-        background-color: #000;
-        padding: 20px;
+        // background-color: #000;
+        // padding: 20px;
         text-transform: capitalize;
 
         @include transition(all);
         
         a{
+            display: block;
+            padding: 20px;
+            width: 100%;
             color: #fff;
+
+            background-color: #000;
+
+            @include transition(all);
+
+            &:hover{
+                background-color: $text-accent-color;
+            }
         }
     }
     .dote{
@@ -867,54 +883,11 @@ p{
     }
 }
 
-// .pop_up{
-//     width: 100%;
-//     height: 100%;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     background-color: rgba(0, 0, 0, 0.349);
-
-//     z-index: 2;
-
-//     overflow: hidden;
-
-//     display: none;
-//     opacity: 0;
-
-//     &.active{
-//         display: block;
-//         opacity: 1;
-//     }
-
-
-//     .pop_up_container{
-//         display: flex;
-//         // align-items: center;
-//         // justify-content: center;
-//         width: 100%;
-//         height: 100%;
-
-//         .pop_up_body{
-//             margin: auto;
-//             width: 40%;
-//             text-align: center;
-//             border: $border_accent;
-
-//             background-color: #fff;
-//             padding: 20px;
-//         }
-//     }
-// }
-
-
-
 
 #myModal {
     // width: 298px; height: 218px;
     width: 100%;
     height: 100%;
-    padding: 18px 9px;
     border-radius: 4px;
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
@@ -952,14 +925,14 @@ p{
 }
 
 
-#myModal #myModal__close {
+// #myModal #myModal__close {
     // width: 21px; height: 21px;
     // position: absolute;
     // font-size: 29px;
     // top: 1px; right: 11px;
     // cursor: pointer;
     // display: block;
-}
+// }
 
 
 // #myOverlay {
@@ -971,4 +944,26 @@ p{
 //     cursor: pointer;
 //     display: none;
 // }
+
+
+@media screen and (max-width:980px) {
+    .pop_up_body{
+        width: 60%;
+    }
+}
+@media screen and (max-width:650px) {
+    .pop_up_body{
+        width: 80%;
+    }
+}
+@media screen and (max-width:485px) {
+    .pop_up_body{
+        width: 90%;
+        box-sizing: border-box;
+
+        .h3{
+            font-size: 30px;
+        }
+    }
+}
 // end base 

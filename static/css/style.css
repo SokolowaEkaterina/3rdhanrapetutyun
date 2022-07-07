@@ -150,6 +150,10 @@ h2, .h2 {
     font-size: 25px;
   }
 }
+h3, .h3 {
+  font-size: 38px;
+}
+
 p {
   font-size: 14px;
   line-height: 20px;
@@ -730,6 +734,7 @@ p {
   height: 60px;
   float: right;
   padding: 30px 30px 0 30px;
+  margin-right: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
@@ -743,14 +748,21 @@ p {
           transform: translateX(100%);
   top: 43px;
   display: block;
-  background-color: #000;
-  padding: 20px;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 .more .content a {
+  display: block;
+  padding: 20px;
+  width: 100%;
   color: #fff;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.more .content a:hover {
+  background-color: #0000C3;
 }
 .more .dote {
   -webkit-box-align: center;
@@ -786,7 +798,6 @@ p {
 #myModal {
   width: 100%;
   height: 100%;
-  padding: 18px 9px;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -828,6 +839,26 @@ p {
   margin: 30px 20px 0px 20px;
 }
 
+@media screen and (max-width: 980px) {
+  .pop_up_body {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .pop_up_body {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 485px) {
+  .pop_up_body {
+    width: 90%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .pop_up_body .h3 {
+    font-size: 30px;
+  }
+}
 header {
   background-image: linear-gradient(90.12deg, #FD4D53 0%, #674DFD 50.26%, #F9A953 99.96%);
   -webkit-box-sizing: border-box;
@@ -836,7 +867,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
 }
 header::before {
   content: "";
@@ -1081,7 +1112,7 @@ header::before {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
   header::before {
     display: none;
   }
@@ -1096,7 +1127,8 @@ header::before {
             align-items: center;
   }
   .header_block .logo img {
-    padding-top: 30px;
+    padding-top: 15px;
+    height: 60px;
   }
   .header_block nav {
     position: absolute;
@@ -1144,6 +1176,7 @@ header::before {
     position: relative;
     top: 100%;
     padding: 0px 0 10px 20px;
+    margin-bottom: 20px;
   }
   .header_block .submenu > ul::before {
     content: "";
@@ -1168,6 +1201,8 @@ header::before {
 @media screen and (max-width: 730px) {
   .header_block nav {
     width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 @media screen and (max-width: 510px) {
@@ -1224,9 +1259,9 @@ header::before {
      object-position: center;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 970px) {
   .main_screen {
-    margin-top: 109px;
+    margin-top: 90px;
   }
 }
 .other_main_screen {
@@ -2261,6 +2296,12 @@ header::before {
 .suggestions_page .discussions .discussions_block .item {
   border: 3px solid #000;
   color: #000;
+}
+.suggestions_page .discussions .discussions_block .item a {
+  color: #000;
+}
+.suggestions_page .discussions .discussions_block .item a.myLinkModal {
+  color: #fff;
 }
 .suggestions_page .discussions .discussions_block .item .circle.flag {
   opacity: 0;

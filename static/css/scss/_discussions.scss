@@ -598,6 +598,14 @@
         border: $border;
         color: $text-color;
 
+        a{
+            color: #000;
+        }
+
+        a.myLinkModal{
+            color: #fff;
+        }
+
         .circle{
             &.flag{
                 opacity: 0;
