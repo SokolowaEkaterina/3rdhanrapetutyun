@@ -834,6 +834,7 @@ p {
 }
 .pop_up_body span {
   display: block;
+  text-transform: none;
 }
 .pop_up_body .button {
   margin: 30px 20px 0px 20px;
@@ -3249,6 +3250,9 @@ footer .footer_block {
     margin-top: 10px;
     width: 100%;
   }
+}
+.personal_accaunt_page {
+  margin-top: 145px;
 }
 .personal_accaunt_page .h2 {
   margin-bottom: 50px;
