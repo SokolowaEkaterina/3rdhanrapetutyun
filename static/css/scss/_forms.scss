@@ -1,0 +1,218 @@
+.bg_vidio{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    // z-index: -1;
+
+    img{
+        filter: blur(20px);
+    }
+}
+
+.main_forms{
+    background-color: #fff;
+    border: $border;
+
+    width: 70%;
+
+    margin: 240px auto 150px auto;
+
+    padding-bottom: 100px;
+
+    .h2{
+        text-transform: uppercase;
+        color: #000;
+        text-align: center;
+        padding: 40px 0;
+
+        margin: 0 auto;
+        display: block;
+    }
+
+    .inputs{
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+            width: 50%;
+            padding: 50px 30px;
+
+            color: #fff;
+            box-sizing: border-box;
+
+            box-shadow: 0px 0px 0px 3px #000000;
+
+            label{
+                font-size: 15px;
+                text-transform: capitalize;
+                
+            }
+
+            input{
+                margin-top: 12px;
+                border: 3px solid #fff;
+                background-color: transparent;
+
+                @include transition(all);
+
+                &:focus{
+                    background-color: #fff;
+                }
+            }
+
+            &:nth-child(1){
+                background-color: $red-accent-color;
+            }
+            &:nth-child(2){
+                background-color: $blue-accent-color;
+            }
+            &:nth-child(3){
+                background-color: $orange-accent-color;
+            }
+            &:nth-child(4){
+                background-color: #000;
+            }
+        }
+
+    }
+
+
+
+
+    .add_img{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        a{
+            // margin: 0 auto;
+            display: flex;
+            align-items: center;
+            color: #000;
+
+            &:hover{
+                color: $text-accent-color;
+            }
+            
+
+            .members_item{
+                display: inline-block;
+                .img_wrapper{
+                    background-color: #fff;
+                    width: 123px;
+                    height: 154px;
+
+                    svg{
+                        width: 66px;
+                        height: 56px;
+                        display: block;
+                        margin: 45px auto 0 auto;
+
+                        path{
+                            stroke: #000;
+                        }
+                    }
+
+                    &:after{
+                        top: 10px;
+                        background-color: #000;
+                    }
+                }
+
+                &:hover{
+                    .img_wrapper{
+                        svg{
+                            path{
+                                stroke: $text-accent-color;
+                            }
+                        }
+                        &:after{
+                            background-color: $text-accent-color;
+                        }
+                    }
+                }
+            }
+
+            span{
+                display: inline-block;
+                margin-left: 143px;
+            }
+        }
+    }
+
+
+
+
+    .soc_pages{
+        border-top: $border;
+        border-bottom: $border;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+
+        .soc_link{
+            margin: 0 8.5px 0 8.5px;
+
+            @include transition(all);
+
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+
+        span{
+            width: 30%;
+            display: block;
+            margin: 0 auto 40px auto;
+        }
+    }
+
+
+
+    .agreement{
+        padding-top: 50px;
+
+        display: flex;
+        justify-content: center;
+        // text-align: center;
+
+        .agreemen_wrapper{
+
+            display: flex;
+            align-items: center;
+        }
+
+        // width: 50%;
+
+
+        a{
+            color: #000;
+            display: inline-block;
+
+            margin-right: 20px;
+
+            @include transition(all);
+
+            &:hover{
+                color:$text-accent-color
+            }
+        }
+        input{
+            margin-bottom: 0;
+            margin: 0px;
+            width: auto;
+        }
+    }
+
+    .button_center{
+        padding-top: 50px;
+    }
+
+    .button_center .button input{
+        margin-bottom: 0px;
+    }
+}

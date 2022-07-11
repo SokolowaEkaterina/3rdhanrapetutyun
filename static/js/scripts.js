@@ -47,6 +47,22 @@ $(document).ready(function() {
     };
   });
 
+
+//   $(window).on('load resize', function() {
+//     if ($(window).width() < 907) {
+//         $('.account_features').click(function(){
+//             $('.account_features').addClass('active');
+//         });
+//     } else {
+//         $('.account_features').click(function(){
+//             $('.account_features').removeClass('active');
+//         });
+//     }
+// });
+    $('.account_features').click(function(){
+        $('.account_features').toggleClass('active');
+    });
+
   // animation
 	$(window).on('load scroll', function(){
 	    $('.main_section').each(function(){

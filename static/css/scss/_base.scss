@@ -710,6 +710,60 @@ p{
     }
 }
 
+input,
+select{
+    box-sizing: border-box;
+    padding: 10px 30px 10px 10px;
+    width: 101%;
+    border: $border;
+
+    margin-bottom: 10px;
+
+    @include transition(all);
+
+        border: $border_accent;
+}
+
+.checkbox_wrapper{
+    input[type="checkbox"]{
+        display: none;
+    }
+    .label_checkbox{
+        cursor: pointer;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: $border;
+        position: relative;
+
+        @include transition(all);
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transform: rotate(45deg);
+            left: 50%;
+            top: 50%;
+            margin: -10px 0 0 -7px;
+            opacity: 0;
+
+            @include transition(all);
+        }
+    }
+
+    input[type="checkbox"]:checked + .label_checkbox{
+        background-color: $text-accent-color;
+        border: $border_accent;
+        &::before{
+            opacity: 1;
+        }
+    }
+}
+
 @media screen and (max-width:850px) {
     .discussions_page,
     .members_page{
@@ -764,7 +818,6 @@ p{
         }
     }
 }
-
 
 
 

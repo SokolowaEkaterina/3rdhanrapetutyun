@@ -57,7 +57,7 @@
                         <li><a href="vote.html">ընտրություն</a></li>
                         <li><span>մենք</span>
                                 <ul>
-                                    <li><a class="active_link" href="about_us.html">մեր մասին</a></li>
+                                    <li><a href="about_us.html">մեր մասին</a></li>
                                     <li><a href="quorum_members.html">քվորումի անդամները</a></li>
                                     <li><a href="members.html">մասնակիցներ</a></li>
                                     <li><a href="regulations.html">կանոնակարգերը</a></li>
@@ -65,34 +65,91 @@
                                 </ul>
                         </li>
                     </ul>
-                    
                 </nav>
             </div>
         </div>
     </header>
     <!-- end header -->
-    
-    <!-- start main_screen  -->
-    <div class="main_screen img_wrapper other_main_screen">
-        <div class="circle circle_1"></div>
-        <div class="circle circle_150 circle_2"></div>
-        <div class="circle circle_50 circle_3"></div>
-        <div class="circle circle_50 circle_4"></div>
-        <div class="circle circle_150 circle_5"></div>
-        <div class="page_width">
-            <ul class="breadcrumbs">
-                <li><a href="index.html">հիմնական էջ</a></li>
-                <li class="active"><span>մեր մասին</span></li>
-            </ul>
-        </div>
-        <div class="page_width">
-            <div class="h1">մեր մասին</div>
-        </div>
+
+    <div class="bg_vidio img_wrapper">
+        <img src="static/img/main_screen_2.jpg" alt="none">
     </div>
-    <!-- end main_screen  -->
+
+    <!-- start forms  -->
+    <div class="page_width">
+        <form class="main_forms">
+            <span class="h2">գրանցել</span>
+
+            <div class="inputs">
+                <div class="item">
+                    <label for="name">Անուն</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="item">
+                    <label for="surname">Ազգանունը</label>
+                    <input type="text" name="surname">
+                </div>
+                <div class="item">
+                    <label for="email">Էլ. Փոստ</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="item">
+                    <label for="password">գաղտնաբառը</label>
+                    <input type="password" name="password">
+                </div>
+            </div>
+
+            <div class="add_img">
+                <a href="#">
+                    <div class="members_item">
+                        <div class="img_wrapper">
+                            <svg width="71" height="61" viewBox="0 0 71 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M68.4967 52.5373C68.4967 54.2127 67.8598 55.8195 66.7261 57.0042C65.5924 58.1889 64.0548 58.8545 62.4516 58.8545H8.04516C6.44188 58.8545 4.90427 58.1889 3.77059 57.0042C2.6369 55.8195 2 54.2127 2 52.5373V17.7929C2 16.1175 2.6369 14.5107 3.77059 13.326C4.90427 12.1413 6.44188 11.4757 8.04516 11.4757H20.1355L26.1806 2H44.3161L50.3612 11.4757H62.4516C64.0548 11.4757 65.5924 12.1413 66.7261 13.326C67.8598 14.5107 68.4967 16.1175 68.4967 17.7929V52.5373Z" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M35.2492 45.9818C41.7467 45.9818 47.014 40.4586 47.014 33.6454C47.014 26.8323 41.7467 21.3091 35.2492 21.3091C28.7517 21.3091 23.4844 26.8323 23.4844 33.6454C23.4844 40.4586 28.7517 45.9818 35.2492 45.9818Z" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Ավելացրեք ձեր լուսանկարը</span>
+                </a>
+            </div>
+
+            <div class="soc_pages">
+                <span>Անպայման նշեք ձեր էջը ներկայացված սոցիալական ցանցերից մեկում</span>
+                <a href="#" class="soc_link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.9602 0.240234H3.04023C1.49463 0.240234 0.240234 1.49463 0.240234 3.04023V20.9602C0.240234 22.5058 1.49463 23.7602 3.04023 23.7602H20.9602C22.5058 23.7602 23.7602 22.5058 23.7602 20.9602V3.04023C23.7602 1.49463 22.5058 0.240234 20.9602 0.240234ZM18.7202 8.64023H17.6002C16.4018 8.64023 15.9202 8.92023 15.9202 9.76023V11.4402H18.7202L18.1602 14.2402H15.9202V22.6402H13.1202V14.2402H10.8802V11.4402H13.1202V9.76023C13.1202 7.52023 14.2402 5.84023 16.4802 5.84023C18.1042 5.84023 18.7202 6.40023 18.7202 6.40023V8.64023Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="soc_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="agreement">
+                <div class="agreemen_wrapper">
+                    <a href="#">Ես համաձայն եմ օգտվողի համաձայնագրի հետ</a>
+                    <div class="checkbox_wrapper">
+                        <label>
+                            <input type="checkbox" name="agreement">
+                            <span class="label_checkbox"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button_center">   
+                <div class="button">
+                    <input type="button" value="գրանցվել">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- end forms  -->
 
     <!-- start statistics  -->
-    <div class="statistics margin">
+    <div class="statistics">
         <a href="members.html" class="item">
             <div class="item_title">
                 <span>ակտիվ օգտվողներ</span>
