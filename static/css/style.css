@@ -4093,7 +4093,8 @@ footer .footer_block {
   opacity: 0.5;
 }
 .main_forms .soc_pages span {
-  width: 30%;
+  width: 70%;
+  text-align: left;
   display: block;
   margin: 0 auto 40px auto;
 }
@@ -4136,11 +4137,6 @@ footer .footer_block {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 1580px) {
-  .main_forms .soc_pages span {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 1150px) {
   .main_forms {
     width: 90%;

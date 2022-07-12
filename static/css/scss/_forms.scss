@@ -167,7 +167,9 @@
         }
 
         span{
-            width: 30%;
+            // width: 30%;
+            width: 70%;
+            text-align: left;
             display: block;
             margin: 0 auto 40px auto;
         }
@@ -219,13 +221,13 @@
     }
 }
 
-@media screen and(max-width:1580px) {
-    .main_forms .soc_pages{
-        span{
-            width: 50%;
-        }
-    }
-}
+// @media screen and(max-width:1580px) {
+//     .main_forms .soc_pages{
+//         span{
+//             width: 50%;
+//         }
+//     }
+// }
 
 @media screen and(max-width:1150px) {
     .main_forms{
