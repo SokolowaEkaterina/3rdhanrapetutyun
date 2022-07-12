@@ -671,7 +671,6 @@ textarea {
   padding: 10px 30px 10px 10px;
   width: 101%;
   border: 3px solid #000;
-  margin-bottom: 10px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border: 3px solid #0000C3;
@@ -1332,6 +1331,9 @@ header::before {
   .header_block nav .top_nav .account_features .personal_acc span {
     text-transform: capitalize;
   }
+  .header_block nav .top_nav .account_features .personal_acc_menu {
+    background-color: #0000C3;
+  }
   .header_block nav .top_nav .account_features:hover .personal_acc_menu {
     opacity: 0;
     pointer-events: none;
@@ -1357,6 +1359,9 @@ header::before {
   .header_block nav .menu a::before,
 .header_block nav .menu span::before {
     background-color: #0000C3;
+  }
+  .header_block nav .menu li .counter {
+    top: 0;
   }
 
   .header_block .submenu > ul {
@@ -3528,6 +3533,11 @@ footer .footer_block {
   fill: #000;
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.personal_information .information .information_bottom_block svg:hover {
+  opacity: 0.5;
 }
 .personal_information .information .information_bottom_block p {
   width: 95%;
@@ -4097,6 +4107,9 @@ footer .footer_block {
   text-align: left;
   display: block;
   margin: 0 auto 40px auto;
+}
+.main_forms .soc_pages .span_center {
+  text-align: center;
 }
 .main_forms .agreement {
   padding-top: 50px;

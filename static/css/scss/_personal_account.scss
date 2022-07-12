@@ -103,6 +103,12 @@
                 margin: 50px 5px 0 5px;
                 fill: #000;
                 transform: translateX(-5px);
+
+                @include transition(all);
+
+                &:hover{
+                    opacity: 0.5;
+                }
             }
 
             p{

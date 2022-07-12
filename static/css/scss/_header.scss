@@ -437,6 +437,9 @@ header{
                     }
     
                 }
+                .personal_acc_menu{
+                    background-color: $text-accent-color;
+                }
                 &:hover{
                     .personal_acc_menu{
                         // display: block;
@@ -474,6 +477,10 @@ header{
                 &::before{
                     background-color: $text-accent-color;
                 }
+            }
+
+            li .counter{
+                top: 0;
             }
         }
     }
