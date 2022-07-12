@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    // pop_up
-    $("a.myLinkModal").click(function (event) {
+    // pop_up 1
+    $(".myLinkModal").click(function (event) {
         event.preventDefault();
         $("#myOverlay").fadeIn(297, function () {
             $("#myModal")
@@ -18,7 +18,23 @@ $(document).ready(function() {
     });
     /////////
 
+    // pop_up 2
+    $(".my_delit_Modal").click(function (event) {
+        event.preventDefault();
+        $("#delit_accaunt_Overlay").fadeIn(297, function () {
+            $("#delit_accaunt")
+                .css("display", "block")
+                .animate({ opacity: 1 }, 198);
+        });
+    });
 
+    $("#delit_accaunt__close, #delit_accaunt_Overlay").click(function () {
+        $("#delit_accaunt").animate({ opacity: 0 }, 198, function () {
+            $(this).css("display", "none");
+            $("#delit_accaunt_Overlay").fadeOut(297);
+        });
+    });
+    /////////
 
 
 

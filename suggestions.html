@@ -40,12 +40,27 @@
                                 </svg>
                             </a>
                         </div>
-                        <a href="login.html" class="button white_blue">
+                        <!-- <a href="login.html" class="button white_blue">
                             <span>մուտք գործել</span>
                         </a>
                         <a href="register.html" class="button white_blue">
                             <span>գրանցել</span>
-                        </a>
+                        </a> -->
+                        <div class="account_features">
+                            <div class="button white_blue personal_acc">
+                                <span>Անուն ազգանուն</span>
+                            </div>
+                            <ul class="personal_acc_menu">
+                                <li>
+                                    <a href="personal_account.html" class="button white_blue personal_acc">
+                                        <span>Անուն ազգանուն</span>
+                                    </a>
+                                </li>
+                                <li class="item"><span>փոխել</span></li>
+                                <li class="item"><span>ելք</span></li>
+                                <li class="item my_delit_Modal"><span>ջնջել</span></li>
+                            </ul>
+                        </div>
                     </div>
                     <ul class="menu">
                         <li><a href="news.html">տեղեկատվություն</a>
@@ -111,6 +126,26 @@
     </div>
 
     <div id="myOverlay"></div>
+
+    <!-- pop_up  -->
+    <div id="delit_accaunt">
+        <div class="pop_up_container">
+            <div class="pop_up_body">
+                <span class="h3">Իսկապե՞ս ուզում եք ջնջել ձեր էջը այս կայքում:</span>
+                <div id="delit_accaunt__close" class="button close">
+                    <span>Ոչ</span>
+                </div>
+                <div class="button">
+                    <span>Այո՛</span>
+                </div>
+            </div>
+        </div>
+        <!-- <span id="myModal__close" class="close">ₓ</span> -->
+    </div>
+
+    <div id="delit_accaunt_Overlay"></div>
+
+    <!-- end pop_up  -->
 
 
     <!-- start content  -->

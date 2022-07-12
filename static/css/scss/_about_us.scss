@@ -1,3 +1,5 @@
+// strar about us 
+
 .about_us_page{
     .h2{
         display: block;
@@ -89,6 +91,43 @@
         }
     }
 }
+@media screen and (max-width:780px) {
+    .grid_img_block{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 210px 210px 210px;
+        gap: 20px;
+    
+        .item{
+            width: 100%;
+            position: relative;
+    
+            &:first-child{
+                grid-area: 1 / 1 / 3 / 2; 
+            }
+            &:nth-child(3){
+                grid-area: 2 / 2 / 3 / 3; 
+            }
+            &:last-child{
+                grid-area: 3 / 1 / 4 / 4; 
+            }
+        }
+    }
+}
+@media screen and (max-width:440px) {
+    .grid_img_block{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 110px 110px 210px;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
 
 .img_page_width{
     width: 100%;
@@ -100,6 +139,19 @@
         height: 100%;
     }
 }
+@media screen and (max-width:650px) {
+    .img_page_width{
+        width: 100%;
+        height: 250px;
+    
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 
 
 .flex_img_block{
@@ -121,3 +173,63 @@
         object-fit: cover;
     }
 }
+
+@media screen and (max-width:1300px) {
+    .flex_img_block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px 250px;
+        // flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    
+        justify-content: start;
+        
+        .item{
+            // width: 30%;
+            width: 100%;
+
+            &:first-child{
+                grid-area: 1 / 1 / 2 / 4;
+            }
+            &:last-child{
+                grid-area: 3 / 1 / 4 / 4;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .flex_img_block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 100px 200px;
+        // flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    
+        justify-content: start;
+        
+        .item{
+            // width: 30%;
+            width: 100%;
+
+            &:first-child{
+                grid-area: 1 / 1 / 2 / 4;
+            }
+            &:last-child{
+                grid-area: 3 / 1 / 4 / 4;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// end about us 
