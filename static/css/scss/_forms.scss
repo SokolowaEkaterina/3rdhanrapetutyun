@@ -1,3 +1,5 @@
+// star forms 
+
 .bg_vidio{
     position: absolute;
     width: 100%;
@@ -216,3 +218,130 @@
         margin-bottom: 0px;
     }
 }
+
+@media screen and(max-width:1580px) {
+    .main_forms .soc_pages{
+        span{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and(max-width:1150px) {
+    .main_forms{
+        width: 90%;
+    }
+}
+@media screen and (max-width:780px) {
+    .main_forms .add_img{
+        a{
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .members_item{
+                width: auto;
+                .img_wrapper{
+                    width: 123px;
+                }
+
+                
+            }
+
+            span{
+                margin-left: 0px;
+                width: 100%;
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width:660px) {
+    .main_forms{
+
+        .inputs{
+            .item{
+                width: 100%;
+            }
+        }
+
+        .soc_pages{
+            span{
+                width: 80%;
+            }
+        }
+
+
+        .agreement{
+            padding-top: 0px;
+            padding: 50px 20px 0 30px;
+        }
+    }
+}
+@media screen and (max-width:480px) {
+    .main_forms{
+        width: 100%;
+        .soc_pages{
+            span{
+                width: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.make_an_offer_page{
+    padding: 0 130px;
+    box-sizing: border-box;
+    .title{
+        font-size: 30px;
+        color: $text-accent-color;
+    }
+
+    .warning{
+        display: block;
+        font-size: 12px;
+
+        margin: 20px 0;
+    }
+
+    textarea{
+        margin-bottom: 80px;
+        resize: none;
+    }
+
+    .title_input{
+        height: 100px;
+    }
+
+    .body_input{
+        height: 330px;
+    }
+
+    .button_center .button{
+        margin-top: 80px;
+
+        input{
+            margin-bottom: 0px;   
+        }
+    }
+}
+
+@media screen and (max-width:870px) {
+    .make_an_offer_page{
+        padding: 0px 70px;
+    }
+}
+@media screen and (max-width:700px) {
+    .make_an_offer_page{
+        padding: 0px 0px;
+    }
+}
+// end forms 

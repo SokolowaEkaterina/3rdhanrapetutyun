@@ -711,7 +711,9 @@ p{
 }
 
 input,
-select{
+select,
+textarea{
+    font-family: $main-font;
     box-sizing: border-box;
     padding: 10px 30px 10px 10px;
     width: 101%;
@@ -723,6 +725,70 @@ select{
 
         border: $border_accent;
 }
+
+.file_label{
+    span{
+        display: inline-block;
+        width: 400px;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+    &:hover{
+        svg{
+            path{
+                stroke: $text-accent-color;
+            }
+        }
+    }
+    svg{
+        vertical-align: middle;
+        @include transition(all);
+        path{
+            stroke: #000;
+        }
+    }
+
+    input[type="file"]{
+        display: none;
+    }
+}
+
+@media screen and(max-width:732px) {
+    .file_label{
+        display: flex;
+        svg{
+            width: 20%;
+        }
+        span{
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width:440px) {
+    .file_label{
+        display: flex;
+        flex-wrap: wrap;
+        svg{
+            width: 100%;
+        }
+        span{
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .checkbox_wrapper{
     input[type="checkbox"]{

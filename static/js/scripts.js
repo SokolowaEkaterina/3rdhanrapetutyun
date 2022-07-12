@@ -22,21 +22,6 @@ $(document).ready(function() {
 
 
 
-
-//   // добавляем класс в шапку при скролле
-// 	$(window).on('load scroll resize', function(){
-// 		//var height = $(window).height() - 100;
-// 		if($(this).scrollTop() > 10) {
-// 		    $('#header').addClass('scroll');
-// 		} else {
-// 		    $('#header').removeClass('scroll');
-// 		} 
-// 	});
-
-
-
-
-
   
   // добавляем класс в пункты с подменю
   $('ul.menu > li').each(function(){
@@ -48,21 +33,23 @@ $(document).ready(function() {
   });
 
 
-//   $(window).on('load resize', function() {
-//     if ($(window).width() < 907) {
-//         $('.account_features').click(function(){
-//             $('.account_features').addClass('active');
-//         });
-//     } else {
-//         $('.account_features').click(function(){
-//             $('.account_features').removeClass('active');
-//         });
-//     }
-// });
+//   подменю когда произашёл вход в аккаунт
     $('.account_features').click(function(){
         $('.account_features').toggleClass('active');
     });
 
+
+$('.regulation_title').click(function(){
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
+        $(this).next('.hiden_block').slideUp();
+    }else{
+        $(this).addClass('active');
+        $(this).next('.hiden_block').slideDown();
+    }
+});
+
+    
   // animation
 	$(window).on('load scroll', function(){
 	    $('.main_section').each(function(){

@@ -1,0 +1,89 @@
+// start regulations 
+.regulations_page{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    widows: 100%;
+
+    padding: 0 130px;
+
+    box-sizing: border-box;
+
+    .regulation_item{
+        widows: 100%;
+
+        .regulation_title{
+            cursor: pointer;
+            font-size: 30px;
+            display: block;
+            padding: 20px 80px 20px 20px;
+            border-bottom: $border;
+            position: relative;
+
+            @include transition(all);
+
+            &::before{
+                content: '';
+                position: absolute;
+                left: auto;
+                right: 40px;
+                top: 50%;
+                margin-top: -15px;
+                width: 15px;
+                height: 15px;
+                background-color: transparent;
+                transform: rotate(45deg);
+                border-bottom: $border;
+                border-right: $border;
+
+                @include transition(all);
+            }
+
+            &.active{
+                background-color: #000;
+                color: #fff;
+
+                &::before{
+                    margin-top: 0px;
+                    transform: rotate(225deg);
+                    border-bottom: 3px solid #fff;
+                    border-right: 3px solid #fff;
+                }
+            }
+        }
+        .hiden_block{
+            padding: 20px 20px 50px;
+            display: none;
+            border: $border;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .regulations_page{
+        padding: 0px;
+    }
+}
+@media screen and (max-width:620px){
+    .regulations_page .regulation_item .regulation_title{
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:400px) {
+    .regulations_page .regulation_item .regulation_title{
+        padding: 20px 5px 90px 5px;
+        widows: 100%;
+        text-align: center;
+        &:before{
+            top: auto;
+            right: auto;
+            bottom: 30px;
+            left: 50%;
+            // transform: translateX(-50%);
+            margin-left: -10px;
+        }
+    }
+}
+
+// end regulations 
