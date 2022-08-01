@@ -21,6 +21,10 @@ $border_accent: 3px solid $text-accent-color;
 
 body{
     font-family: $main-font;
+
+    &.wrapper_overflow{
+        overflow: hidden;
+    }
 }
 
 .margin{

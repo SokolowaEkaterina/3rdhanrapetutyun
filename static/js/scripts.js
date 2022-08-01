@@ -80,9 +80,20 @@ $('.regulation_title').click(function(){
             if($('.menu_btn').hasClass('active')){
                 $('.menu_btn').removeClass('active');
                 $('nav').removeClass('slid_active');
+                $('body').removeClass('wrapper_overflow');
             }else{
                 $('.menu_btn').addClass('active');
                 $('nav').addClass('slid_active');
+                $('body').addClass('wrapper_overflow');
+            }
+        });
+
+        $(window).on('load resize', function() {
+            if ($(window).width() > 970) {
+                $('body').removeClass('wrapper_overflow');
+                
+            }else if ($('nav').hasClass('slid_active')){
+                $('body').addClass('wrapper_overflow');
             }
         });
 
