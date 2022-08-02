@@ -1,0 +1,134 @@
+// start determination 
+
+.determination_block{
+    display: flex;
+
+    box-sizing: border-box;
+
+    .text{
+        padding-top: 50px;
+        padding-right: 100px;
+
+        width: 35%;
+    }
+
+    .determination_exemples{
+        box-sizing: border-box;
+        display: flex;
+
+        flex-wrap: wrap;
+        // width: 100%;
+        gap: 20px;
+
+        width: 65%;
+        
+
+        .determination_item{
+            width: calc(50% - 20px);
+
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.determination_page{
+    // padding: 0 130px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.determination_item{
+    width: 100%;
+    border: $border;
+    display: block;
+    color: #000;
+    cursor: pointer;
+
+    margin-bottom: 30px;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+
+    @include transition(all);
+
+    .determin_date{
+        margin: -3px 0 0 -3px;
+        display: inline-block;
+        text-align: center;
+        padding: 30px 50px;
+        background-color: #000;
+        color: #fff;
+        box-sizing: border-box;
+        font-size: 12px;
+        border: 3px solid #000;
+        @include transition(all);
+
+    }
+    .title{
+        font-size: 20px;
+        margin-top: 40px;
+        padding: 0 50px;
+        display: block;
+        @include transition(all);
+
+    }
+
+    p{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 0 50px;
+        @include transition(all);
+
+    }
+
+    &:hover{
+        border: $border_accent;
+
+        background-color: $text-accent-color;
+
+        color: #fff;
+
+        .determin_date{
+            background-color: #fff;
+            border: 3px solid #fff;
+            
+            color: $text-accent-color;
+        }
+
+        .title,
+        p{
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .determination_page{
+        width: 100%;
+    }
+    .determination_item{
+        .determin_date{
+            padding: 30px 30px;
+        }
+
+        .title,
+        p{
+            padding: 0 30px;
+        }
+    }
+}
+
+// end determination 

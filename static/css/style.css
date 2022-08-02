@@ -1719,6 +1719,110 @@ header::before {
     display: none;
   }
 }
+.determination_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.determination_block .text {
+  padding-top: 50px;
+  padding-right: 100px;
+  width: 35%;
+}
+.determination_block .determination_exemples {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  width: 65%;
+}
+.determination_block .determination_exemples .determination_item {
+  width: calc(50% - 20px);
+  margin-bottom: 0px;
+}
+
+.determination_page {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.determination_item {
+  width: 100%;
+  border: 3px solid #000;
+  display: block;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.determination_item:last-child {
+  margin-bottom: 0px;
+}
+.determination_item .determin_date {
+  margin: -3px 0 0 -3px;
+  display: inline-block;
+  text-align: center;
+  padding: 30px 50px;
+  background-color: #000;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 12px;
+  border: 3px solid #000;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.determination_item .title {
+  font-size: 20px;
+  margin-top: 40px;
+  padding: 0 50px;
+  display: block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.determination_item p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 0 50px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.determination_item:hover {
+  border: 3px solid #0000C3;
+  background-color: #0000C3;
+  color: #fff;
+}
+.determination_item:hover .determin_date {
+  background-color: #fff;
+  border: 3px solid #fff;
+  color: #0000C3;
+}
+.determination_item:hover .title,
+.determination_item:hover p {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .determination_page {
+    width: 100%;
+  }
+
+  .determination_item .determin_date {
+    padding: 30px 30px;
+  }
+  .determination_item .title,
+.determination_item p {
+    padding: 0 30px;
+  }
+}
 .tegline_wrapper {
   border-top: 3px solid #0000C3;
   border-bottom: 3px solid #0000C3;
