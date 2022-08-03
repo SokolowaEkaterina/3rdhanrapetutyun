@@ -1327,16 +1327,7 @@ header::before {
   background-color: #fff;
 }
 
-@media screen and (max-width: 1130px) {
-  .header_block nav .menu a {
-    margin: 0px 20px;
-  }
-
-  .header_block .submenu > ul a {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1300px) {
   header::before {
     display: none;
   }
@@ -1414,6 +1405,24 @@ header::before {
 .header_block nav .menu span::before {
     background-color: #0000C3;
   }
+  .header_block nav .menu li.accent_link a {
+    display: inline-block;
+  }
+  .header_block nav .menu li.accent_link a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 100%;
+    height: 3px;
+    z-index: 1;
+    background-color: #0000C3;
+    -webkit-animation: width 2s infinite linear;
+            animation: width 2s infinite linear;
+    -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
   .header_block nav .menu li .counter {
     top: 0;
   }
@@ -1422,7 +1431,7 @@ header::before {
     opacity: 1;
     position: relative;
     top: 100%;
-    padding: 0px 0 10px 20px;
+    padding: 0px 0 0px 20px;
   }
   .header_block .submenu > ul::before {
     content: "";
@@ -1505,7 +1514,7 @@ header::before {
      object-position: center;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1300px) {
   .main_screen {
     margin-top: 90px;
   }
@@ -1731,6 +1740,12 @@ header::before {
   padding-right: 100px;
   width: 35%;
 }
+.determination_block .text .arrow_button {
+  margin-top: 50px;
+}
+.determination_block .text .arrow_button img {
+  width: 100%;
+}
 .determination_block .determination_exemples {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1747,6 +1762,49 @@ header::before {
   margin-bottom: 0px;
 }
 
+@media screen and (max-width: 1200px) {
+  .determination_block {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .determination_block .text {
+    padding-right: 25px;
+  }
+  .determination_block .determination_exemples {
+    width: 60%;
+  }
+  .determination_block .determination_exemples .determination_item {
+    padding-bottom: 20px;
+  }
+  .determination_block .determination_exemples .determination_item .determin_date {
+    padding: 30px 30px;
+  }
+  .determination_block .determination_exemples .determination_item .title,
+.determination_block .determination_exemples .determination_item p {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .determination_block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .determination_block .text {
+    padding-right: 0px;
+    width: 100%;
+  }
+  .determination_block .determination_exemples {
+    margin-top: 80px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .determination_block .determination_exemples .determination_item {
+    width: 100%;
+  }
+}
 .determination_page {
   width: 85%;
   margin-left: auto;
@@ -1760,6 +1818,7 @@ header::before {
   color: #000;
   cursor: pointer;
   margin-bottom: 30px;
+  padding-bottom: 50px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -1790,7 +1849,6 @@ header::before {
 }
 .determination_item p {
   margin-top: 20px;
-  margin-bottom: 50px;
   padding: 0 50px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
